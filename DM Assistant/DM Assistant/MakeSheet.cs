@@ -75,6 +75,7 @@ namespace DM_Assistant
             int intEXP;
             int intLevel;
             int intProficancy;
+            // used to keep the skills list up to date
             if (int.TryParse(txtEXP.Text, out intEXP))
             {
                 if (intEXP > 355000)
@@ -206,54 +207,10 @@ namespace DM_Assistant
 
                 }
             }
+            SkillCeck();
         }
-        //Sets the skill panel while the stats change
-        public void SetSkillPanel(int StatMod, string Stat)
-        {
-            bool SkillProficant;
-            int SkillMod;
-            switch (Stat)
-            {
-                case "STR":
-                    //resets the skill mod to the base StatMod
-                    SkillMod = StatMod;
-                    //Checks to see if proficant in STR saving throws
-                    SkillProficant = NewPlayer.GetSkillArray(0);
-                    //Sets the mod lable
-                    if (SkillProficant)
-                    {
-                        SkillMod += NewPlayer.ProficancyMod;
-                    }
-                    if (SkillMod <= 0)
-                    {
-                        lblSTRSavingThrow.Text = SkillMod.ToString("0");
-                    }
-                    else
-                    {
-                        lblSTRSavingThrow.Text = "+" + SkillMod.ToString("0");
-                    }
-                    //resets the skill mod to the base StatMod
-                    SkillMod = StatMod;
-                    //Checks to see if proficant in STR Athletics
-                    SkillProficant = NewPlayer.GetSkillArray(1);
-                    //Sets the mod lable
-                    if (SkillProficant)
-                    {
-                        SkillMod += NewPlayer.ProficancyMod;
-                    }
-                    if (SkillMod <= 0)
-                    {
-                        lblAthletics.Text = SkillMod.ToString("0");
-                    }
-                    else
-                    {
-                        lblAthletics.Text = "+" + SkillMod.ToString("0");
-                    }
-                    break;
-                case "DEX":
-            }
-        }
-        //returns the mod for the skill panel check boxes
+ 
+        //returns the mod for the skill panel
         public int SetSkill(int SkillNum, bool Proficant, int Statlvl)
         {
             int SkillProficancy = 0;
@@ -268,11 +225,9 @@ namespace DM_Assistant
             }
             return SkillProficancy;
         }
-
         private void txtSTR_TextChanged(object sender, EventArgs e)
         {
             int STR;
-            string Stat = "STR";
             if (int.TryParse(txtSTR.Text, out STR))
             {
                 NewPlayer.STR = STR;
@@ -280,14 +235,13 @@ namespace DM_Assistant
                 if (STR <= 0)
                 {
                     lblSTR.Text = STR.ToString("0");
-                    SetSkillPanel(STR, Stat);
                 }
                 else
                 {
                     lblSTR.Text = "+" + STR.ToString("0");
-                    SetSkillPanel(STR, Stat);
                 }
             }
+            SkillCeck();
         }
 
         private void txtDEX_TextChanged(object sender, EventArgs e)
@@ -300,12 +254,15 @@ namespace DM_Assistant
                 if (DEX <= 0)
                 {
                     lblDEX.Text = DEX.ToString("0");
+                    txtInitative.Text = DEX.ToString("0");
                 }
                 else
                 {
                     lblDEX.Text = "+" + DEX.ToString("0");
+                    txtInitative.Text ="+" + DEX.ToString("0");
                 }
             }
+            SkillCeck();
         }
 
         private void txtCON_TextChanged(object sender, EventArgs e)
@@ -324,6 +281,7 @@ namespace DM_Assistant
                     lblCON.Text = "+" + CON.ToString("0");
                 }
             }
+            SkillCeck();
         }
 
         private void txtINT_TextChanged(object sender, EventArgs e)
@@ -342,6 +300,7 @@ namespace DM_Assistant
                     lblINT.Text = "+" + INT.ToString("0");
                 }
             }
+            SkillCeck();
         }
 
         private void txtWIS_TextChanged(object sender, EventArgs e)
@@ -360,6 +319,7 @@ namespace DM_Assistant
                     lblWIS.Text = "+" + WIS.ToString("0");
                 }
             }
+            SkillCeck();
         }
 
         private void txtCHA_TextChanged(object sender, EventArgs e)
@@ -378,6 +338,7 @@ namespace DM_Assistant
                     lblCHA.Text = "+" + CHA.ToString("0");
                 }
             }
+            SkillCeck();
         }
 
         private void cmbRace_SelectedIndexChanged(object sender, EventArgs e)
@@ -389,13 +350,15 @@ namespace DM_Assistant
         {
              
         }
-
-        private void chkSTRSavingThrow_CheckedChanged(object sender, EventArgs e)
+        private void SkillCeck()
         {
             int Mod;
+            int SkillNumber = 0;
+            //str skills check 
+            // Skill 0
             if (chkSTRSavingThrow.Checked)
             {
-                Mod = SetSkill(0, true, NewPlayer.STR);
+                Mod = SetSkill(SkillNumber, true, NewPlayer.STR);
                 if (Mod <= 0)
                 {
                     lblSTRSavingThrow.Text = Mod.ToString("0");
@@ -407,7 +370,7 @@ namespace DM_Assistant
             }
             else if (!chkSTRSavingThrow.Checked)
             {
-                Mod = SetSkill(0, false, NewPlayer.STR);
+                Mod = SetSkill(SkillNumber, false, NewPlayer.STR);
                 if (Mod <= 0)
                 {
                     lblSTRSavingThrow.Text = Mod.ToString("0");
@@ -417,6 +380,730 @@ namespace DM_Assistant
                     lblSTRSavingThrow.Text = "+" + Mod.ToString("0");
                 }
             }
+            //changes it to the next skill check
+            //1
+            SkillNumber++;
+            if (chkAthletics.Checked)
+            {
+                Mod = SetSkill(1, true, NewPlayer.STR);
+                if (Mod <= 0)
+                {
+                    lblAthletics.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblAthletics.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkAthletics.Checked)
+            {
+                Mod = SetSkill(1, false, NewPlayer.STR);
+                if (Mod <= 0)
+                {
+                    lblAthletics.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblAthletics.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //dex skills check 
+            //2
+            SkillNumber++;
+            if (chkDEXSavingThrow.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.DEX);
+                if (Mod <= 0)
+                {
+                    lblDEXSavingThrow.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblDEXSavingThrow.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkDEXSavingThrow.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.DEX);
+                if (Mod <= 0)
+                {
+                    lblDEXSavingThrow.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblDEXSavingThrow.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //3
+            SkillNumber++;
+            if (chkAcrobatics.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.DEX);
+                if (Mod <= 0)
+                {
+                    lblAcrobatics.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblAcrobatics.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkAcrobatics.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.DEX);
+                if (Mod <= 0)
+                {
+                    lblAcrobatics.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblAcrobatics.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //4
+            SkillNumber++;
+            if (chkSleightOfHand.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.DEX);
+                if (Mod <= 0)
+                {
+                    lblSleightOfHand.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblSleightOfHand.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkSleightOfHand.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.DEX);
+                if (Mod <= 0)
+                {
+                    lblSleightOfHand.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblSleightOfHand.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //5
+            SkillNumber++;
+            if (chkStealth.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.DEX);
+                if (Mod <= 0)
+                {
+                    lblStealth.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblStealth.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkStealth.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.DEX);
+                if (Mod <= 0)
+                {
+                    lblStealth.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblStealth.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //con skill check 
+            //6
+            SkillNumber++;
+            if (chkCONSavingThrow.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.CON);
+                if (Mod <= 0)
+                {
+                    lblCONSavingThrow.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblCONSavingThrow.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkCONSavingThrow.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.CON);
+                if (Mod <= 0)
+                {
+                    lblCONSavingThrow.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblCONSavingThrow.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //INT skill check 
+            //7
+            SkillNumber++;
+            if (chkINTSavingThrow.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.INT);
+                if (Mod <= 0)
+                {
+                    lblINTSavingThrow.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblINTSavingThrow.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkINTSavingThrow.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.INT);
+                if (Mod <= 0)
+                {
+                    lblINTSavingThrow.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblINTSavingThrow.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //8
+            SkillNumber++;
+            if (chkArcana.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.INT);
+                if (Mod <= 0)
+                {
+                    lblArcana.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblArcana.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkArcana.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.INT);
+                if (Mod <= 0)
+                {
+                    lblArcana.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblArcana.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //9
+            SkillNumber++;
+            if (chkHistory.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.INT);
+                if (Mod <= 0)
+                {
+                    lblHistory.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblHistory.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkHistory.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.INT);
+                if (Mod <= 0)
+                {
+                    lblHistory.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblHistory.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //10
+            SkillNumber++;
+            if (chkInvestigation.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.INT);
+                if (Mod <= 0)
+                {
+                    lblInvestigation.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblInvestigation.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkInvestigation.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.INT);
+                if (Mod <= 0)
+                {
+                    lblInvestigation.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblInvestigation.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //11
+            SkillNumber++;
+            if (chkNature.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.INT);
+                if (Mod <= 0)
+                {
+                    lblNature.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblNature.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkNature.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.INT);
+                if (Mod <= 0)
+                {
+                    lblNature.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblNature.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //12
+            SkillNumber++;
+            if (chkReligion.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.INT);
+                if (Mod <= 0)
+                {
+                    lblReligion.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblReligion.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkReligion.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.INT);
+                if (Mod <= 0)
+                {
+                    lblReligion.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblReligion.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //wis skill check 
+            //13
+            SkillNumber++;
+            if (chkWISSavingThrow.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.WIS);
+                if (Mod <= 0)
+                {
+                    lblWISSavingThrow.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblWISSavingThrow.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkWISSavingThrow.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.WIS);
+                if (Mod <= 0)
+                {
+                    lblWISSavingThrow.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblWISSavingThrow.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //14
+            SkillNumber++;
+            if (chkAnimalHandling.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.WIS);
+                if (Mod <= 0)
+                {
+                    lblAnimalHandling.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblAnimalHandling.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkAnimalHandling.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.WIS);
+                if (Mod <= 0)
+                {
+                    lblAnimalHandling.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblAnimalHandling.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //15
+            SkillNumber++;
+            if (chkInsight.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.WIS);
+                if (Mod <= 0)
+                {
+                    lblInsight.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblInsight.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkInsight.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.WIS);
+                if (Mod <= 0)
+                {
+                    lblInsight.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblInsight.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //16
+            SkillNumber++;
+            if (chkMedicine.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.WIS);
+                if (Mod <= 0)
+                {
+                    lblMedicine.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblMedicine.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkMedicine.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.WIS);
+                if (Mod <= 0)
+                {
+                    lblMedicine.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblMedicine.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //17
+            SkillNumber++;
+            if (chkPerception.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.WIS);
+                if (Mod <= 0)
+                {
+                    lblPerception.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblPerception.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkPerception.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.WIS);
+                if (Mod <= 0)
+                {
+                    lblPerception.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblPerception.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //18
+            SkillNumber++;
+            if (chkSurvival.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.WIS);
+                if (Mod <= 0)
+                {
+                    lblSurvival.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblSurvival.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkSurvival.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.WIS);
+                if (Mod <= 0)
+                {
+                    lblSurvival.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblSurvival.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //cha skill check 
+            //19
+            SkillNumber++;
+            if (chkCHASavingThrow.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.CHA);
+                if (Mod <= 0)
+                {
+                    lblCHASavingThrow.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblCHASavingThrow.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkCHASavingThrow.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.CHA);
+                if (Mod <= 0)
+                {
+                    lblCHASavingThrow.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblCHASavingThrow.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //20
+            SkillNumber++;
+            if (chkDeception.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.CHA);
+                if (Mod <= 0)
+                {
+                    lblDeception.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblDeception.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkDeception.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.CHA);
+                if (Mod <= 0)
+                {
+                    lblDeception.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblDeception.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //21
+            SkillNumber++;
+            if (chkIntimidation.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.CHA);
+                if (Mod <= 0)
+                {
+                    lblIntimidation.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblIntimidation.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkIntimidation.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.CHA);
+                if (Mod <= 0)
+                {
+                    lblIntimidation.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblIntimidation.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //22
+            SkillNumber++;
+            if (chkPerformance.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.CHA);
+                if (Mod <= 0)
+                {
+                    lblPerformance.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblPerformance.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkPerformance.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.CHA);
+                if (Mod <= 0)
+                {
+                    lblPerformance.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblPerformance.Text = "+" + Mod.ToString("0");
+                }
+            }
+            //23
+            SkillNumber++;
+            if (chkPersuasion.Checked)
+            {
+                Mod = SetSkill(SkillNumber, true, NewPlayer.CHA);
+                if (Mod <= 0)
+                {
+                    lblPersuasion.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblPersuasion.Text = "+" + Mod.ToString("0");
+                }
+            }
+            else if (!chkPersuasion.Checked)
+            {
+                Mod = SetSkill(SkillNumber, false, NewPlayer.CHA);
+                if (Mod <= 0)
+                {
+                    lblPersuasion.Text = Mod.ToString("0");
+                }
+                else
+                {
+                    lblPersuasion.Text = "+" + Mod.ToString("0");
+                }
+            }
+        }
+        //Checkboxes
+        private void chkSTRSavingThrow_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkAthletics_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkDEXSavingThrow_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkAcrobatics_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkSleightOfHand_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkStealth_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkCONSavingThrow_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkINTSavingThrow_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkArcana_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkHistory_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkInvestigation_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkNature_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkReligion_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkWISSavingThrow_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkAnimalHandling_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkInsight_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkMedicine_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkPerception_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkSurvival_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkCHASavingThrow_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkDeception_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkIntimidation_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkPerformance_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
+        }
+
+        private void chkPersuasion_CheckedChanged(object sender, EventArgs e)
+        {
+            SkillCeck();
         }
     }
 }

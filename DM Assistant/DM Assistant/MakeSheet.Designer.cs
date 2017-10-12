@@ -225,10 +225,10 @@
             this.chkAthletics.TabIndex = 44;
             this.chkAthletics.Text = "Athletics";
             this.chkAthletics.UseVisualStyleBackColor = true;
+            this.chkAthletics.CheckedChanged += new System.EventHandler(this.chkAthletics_CheckedChanged);
             // 
             // lblSTRSkillsLable
             // 
-            this.lblSTRSkillsLable.Enabled = false;
             this.lblSTRSkillsLable.Location = new System.Drawing.Point(29, 16);
             this.lblSTRSkillsLable.Name = "lblSTRSkillsLable";
             this.lblSTRSkillsLable.Size = new System.Drawing.Size(30, 20);
@@ -249,7 +249,6 @@
             // 
             // lblSTRSavingThrow
             // 
-            this.lblSTRSavingThrow.Enabled = false;
             this.lblSTRSavingThrow.Location = new System.Drawing.Point(48, 59);
             this.lblSTRSavingThrow.Name = "lblSTRSavingThrow";
             this.lblSTRSavingThrow.Size = new System.Drawing.Size(30, 20);
@@ -259,7 +258,6 @@
             // 
             // lblAthletics
             // 
-            this.lblAthletics.Enabled = false;
             this.lblAthletics.Location = new System.Drawing.Point(152, 59);
             this.lblAthletics.Name = "lblAthletics";
             this.lblAthletics.Size = new System.Drawing.Size(30, 20);
@@ -269,7 +267,6 @@
             // 
             // lblDEXSkillsLable
             // 
-            this.lblDEXSkillsLable.Enabled = false;
             this.lblDEXSkillsLable.Location = new System.Drawing.Point(29, 79);
             this.lblDEXSkillsLable.Name = "lblDEXSkillsLable";
             this.lblDEXSkillsLable.Size = new System.Drawing.Size(30, 20);
@@ -286,10 +283,10 @@
             this.chkDEXSavingThrow.TabIndex = 48;
             this.chkDEXSavingThrow.Text = "Saving Throw";
             this.chkDEXSavingThrow.UseVisualStyleBackColor = true;
+            this.chkDEXSavingThrow.CheckedChanged += new System.EventHandler(this.chkDEXSavingThrow_CheckedChanged);
             // 
             // lblDEXSavingThrow
             // 
-            this.lblDEXSavingThrow.Enabled = false;
             this.lblDEXSavingThrow.Location = new System.Drawing.Point(48, 122);
             this.lblDEXSavingThrow.Name = "lblDEXSavingThrow";
             this.lblDEXSavingThrow.Size = new System.Drawing.Size(30, 20);
@@ -306,10 +303,10 @@
             this.chkAcrobatics.TabIndex = 50;
             this.chkAcrobatics.Text = "Acrobatics";
             this.chkAcrobatics.UseVisualStyleBackColor = true;
+            this.chkAcrobatics.CheckedChanged += new System.EventHandler(this.chkAcrobatics_CheckedChanged);
             // 
             // lblAcrobatics
             // 
-            this.lblAcrobatics.Enabled = false;
             this.lblAcrobatics.Location = new System.Drawing.Point(152, 122);
             this.lblAcrobatics.Name = "lblAcrobatics";
             this.lblAcrobatics.Size = new System.Drawing.Size(30, 20);
@@ -326,6 +323,7 @@
             this.chkSleightOfHand.TabIndex = 52;
             this.chkSleightOfHand.Text = "Sleight of Hand";
             this.chkSleightOfHand.UseVisualStyleBackColor = true;
+            this.chkSleightOfHand.CheckedChanged += new System.EventHandler(this.chkSleightOfHand_CheckedChanged);
             // 
             // chkStealth
             // 
@@ -336,10 +334,10 @@
             this.chkStealth.TabIndex = 50;
             this.chkStealth.Text = "Stealth";
             this.chkStealth.UseVisualStyleBackColor = true;
+            this.chkStealth.CheckedChanged += new System.EventHandler(this.chkStealth_CheckedChanged);
             // 
             // lblSleightOfHand
             // 
-            this.lblSleightOfHand.Enabled = false;
             this.lblSleightOfHand.Location = new System.Drawing.Point(48, 165);
             this.lblSleightOfHand.Name = "lblSleightOfHand";
             this.lblSleightOfHand.Size = new System.Drawing.Size(30, 20);
@@ -349,7 +347,6 @@
             // 
             // lblStealth
             // 
-            this.lblStealth.Enabled = false;
             this.lblStealth.Location = new System.Drawing.Point(152, 165);
             this.lblStealth.Name = "lblStealth";
             this.lblStealth.Size = new System.Drawing.Size(30, 20);
@@ -359,7 +356,6 @@
             // 
             // lblCONSkillsLable
             // 
-            this.lblCONSkillsLable.Enabled = false;
             this.lblCONSkillsLable.Location = new System.Drawing.Point(29, 185);
             this.lblCONSkillsLable.Name = "lblCONSkillsLable";
             this.lblCONSkillsLable.Size = new System.Drawing.Size(30, 20);
@@ -376,10 +372,10 @@
             this.chkCONSavingThrow.TabIndex = 54;
             this.chkCONSavingThrow.Text = "Saving Throw";
             this.chkCONSavingThrow.UseVisualStyleBackColor = true;
+            this.chkCONSavingThrow.CheckedChanged += new System.EventHandler(this.chkCONSavingThrow_CheckedChanged);
             // 
             // lblCONSavingThrow
             // 
-            this.lblCONSavingThrow.Enabled = false;
             this.lblCONSavingThrow.Location = new System.Drawing.Point(48, 228);
             this.lblCONSavingThrow.Name = "lblCONSavingThrow";
             this.lblCONSavingThrow.Size = new System.Drawing.Size(30, 20);
@@ -389,7 +385,6 @@
             // 
             // lblINTSkillsLable
             // 
-            this.lblINTSkillsLable.Enabled = false;
             this.lblINTSkillsLable.Location = new System.Drawing.Point(29, 248);
             this.lblINTSkillsLable.Name = "lblINTSkillsLable";
             this.lblINTSkillsLable.Size = new System.Drawing.Size(30, 20);
@@ -406,10 +401,10 @@
             this.chkINTSavingThrow.TabIndex = 56;
             this.chkINTSavingThrow.Text = "Saving Throw";
             this.chkINTSavingThrow.UseVisualStyleBackColor = true;
+            this.chkINTSavingThrow.CheckedChanged += new System.EventHandler(this.chkINTSavingThrow_CheckedChanged);
             // 
             // lblINTSavingThrow
             // 
-            this.lblINTSavingThrow.Enabled = false;
             this.lblINTSavingThrow.Location = new System.Drawing.Point(48, 291);
             this.lblINTSavingThrow.Name = "lblINTSavingThrow";
             this.lblINTSavingThrow.Size = new System.Drawing.Size(30, 20);
@@ -426,10 +421,10 @@
             this.chkArcana.TabIndex = 58;
             this.chkArcana.Text = "Arcana";
             this.chkArcana.UseVisualStyleBackColor = true;
+            this.chkArcana.CheckedChanged += new System.EventHandler(this.chkArcana_CheckedChanged);
             // 
             // lblArcana
             // 
-            this.lblArcana.Enabled = false;
             this.lblArcana.Location = new System.Drawing.Point(152, 291);
             this.lblArcana.Name = "lblArcana";
             this.lblArcana.Size = new System.Drawing.Size(30, 20);
@@ -446,10 +441,10 @@
             this.chkHistory.TabIndex = 60;
             this.chkHistory.Text = "History";
             this.chkHistory.UseVisualStyleBackColor = true;
+            this.chkHistory.CheckedChanged += new System.EventHandler(this.chkHistory_CheckedChanged);
             // 
             // lblHistory
             // 
-            this.lblHistory.Enabled = false;
             this.lblHistory.Location = new System.Drawing.Point(48, 334);
             this.lblHistory.Name = "lblHistory";
             this.lblHistory.Size = new System.Drawing.Size(30, 20);
@@ -466,6 +461,7 @@
             this.chkInvestigation.TabIndex = 62;
             this.chkInvestigation.Text = "Investigation";
             this.chkInvestigation.UseVisualStyleBackColor = true;
+            this.chkInvestigation.CheckedChanged += new System.EventHandler(this.chkInvestigation_CheckedChanged);
             // 
             // chkNature
             // 
@@ -476,10 +472,10 @@
             this.chkNature.TabIndex = 58;
             this.chkNature.Text = "Nature";
             this.chkNature.UseVisualStyleBackColor = true;
+            this.chkNature.CheckedChanged += new System.EventHandler(this.chkNature_CheckedChanged);
             // 
             // lblInvestigation
             // 
-            this.lblInvestigation.Enabled = false;
             this.lblInvestigation.Location = new System.Drawing.Point(152, 334);
             this.lblInvestigation.Name = "lblInvestigation";
             this.lblInvestigation.Size = new System.Drawing.Size(30, 20);
@@ -489,7 +485,6 @@
             // 
             // lblNature
             // 
-            this.lblNature.Enabled = false;
             this.lblNature.Location = new System.Drawing.Point(48, 377);
             this.lblNature.Name = "lblNature";
             this.lblNature.Size = new System.Drawing.Size(30, 20);
@@ -506,10 +501,10 @@
             this.chkReligion.TabIndex = 64;
             this.chkReligion.Text = "Religion";
             this.chkReligion.UseVisualStyleBackColor = true;
+            this.chkReligion.CheckedChanged += new System.EventHandler(this.chkReligion_CheckedChanged);
             // 
             // lblReligion
             // 
-            this.lblReligion.Enabled = false;
             this.lblReligion.Location = new System.Drawing.Point(152, 377);
             this.lblReligion.Name = "lblReligion";
             this.lblReligion.Size = new System.Drawing.Size(30, 20);
@@ -526,10 +521,10 @@
             this.chkWISSavingThrow.TabIndex = 68;
             this.chkWISSavingThrow.Text = "Saving Throw";
             this.chkWISSavingThrow.UseVisualStyleBackColor = true;
+            this.chkWISSavingThrow.CheckedChanged += new System.EventHandler(this.chkWISSavingThrow_CheckedChanged);
             // 
             // lblWISSavingThrow
             // 
-            this.lblWISSavingThrow.Enabled = false;
             this.lblWISSavingThrow.Location = new System.Drawing.Point(48, 440);
             this.lblWISSavingThrow.Name = "lblWISSavingThrow";
             this.lblWISSavingThrow.Size = new System.Drawing.Size(30, 20);
@@ -539,7 +534,6 @@
             // 
             // lblWISSkillsLable
             // 
-            this.lblWISSkillsLable.Enabled = false;
             this.lblWISSkillsLable.Location = new System.Drawing.Point(29, 397);
             this.lblWISSkillsLable.Name = "lblWISSkillsLable";
             this.lblWISSkillsLable.Size = new System.Drawing.Size(30, 20);
@@ -556,6 +550,7 @@
             this.chkAnimalHandling.TabIndex = 70;
             this.chkAnimalHandling.Text = "Animal Handling";
             this.chkAnimalHandling.UseVisualStyleBackColor = true;
+            this.chkAnimalHandling.CheckedChanged += new System.EventHandler(this.chkAnimalHandling_CheckedChanged);
             // 
             // chkInsight
             // 
@@ -566,10 +561,10 @@
             this.chkInsight.TabIndex = 70;
             this.chkInsight.Text = "Insight";
             this.chkInsight.UseVisualStyleBackColor = true;
+            this.chkInsight.CheckedChanged += new System.EventHandler(this.chkInsight_CheckedChanged);
             // 
             // lblAnimalHandling
             // 
-            this.lblAnimalHandling.Enabled = false;
             this.lblAnimalHandling.Location = new System.Drawing.Point(152, 440);
             this.lblAnimalHandling.Name = "lblAnimalHandling";
             this.lblAnimalHandling.Size = new System.Drawing.Size(30, 20);
@@ -579,7 +574,6 @@
             // 
             // lblInsight
             // 
-            this.lblInsight.Enabled = false;
             this.lblInsight.Location = new System.Drawing.Point(48, 483);
             this.lblInsight.Name = "lblInsight";
             this.lblInsight.Size = new System.Drawing.Size(30, 20);
@@ -596,6 +590,7 @@
             this.chkMedicine.TabIndex = 72;
             this.chkMedicine.Text = "Medicine";
             this.chkMedicine.UseVisualStyleBackColor = true;
+            this.chkMedicine.CheckedChanged += new System.EventHandler(this.chkMedicine_CheckedChanged);
             // 
             // chkPerception
             // 
@@ -606,10 +601,10 @@
             this.chkPerception.TabIndex = 70;
             this.chkPerception.Text = "Perception";
             this.chkPerception.UseVisualStyleBackColor = true;
+            this.chkPerception.CheckedChanged += new System.EventHandler(this.chkPerception_CheckedChanged);
             // 
             // lblMedicine
             // 
-            this.lblMedicine.Enabled = false;
             this.lblMedicine.Location = new System.Drawing.Point(152, 483);
             this.lblMedicine.Name = "lblMedicine";
             this.lblMedicine.Size = new System.Drawing.Size(30, 20);
@@ -626,10 +621,10 @@
             this.chkSurvival.TabIndex = 70;
             this.chkSurvival.Text = "Survival";
             this.chkSurvival.UseVisualStyleBackColor = true;
+            this.chkSurvival.CheckedChanged += new System.EventHandler(this.chkSurvival_CheckedChanged);
             // 
             // lblPerception
             // 
-            this.lblPerception.Enabled = false;
             this.lblPerception.Location = new System.Drawing.Point(48, 526);
             this.lblPerception.Name = "lblPerception";
             this.lblPerception.Size = new System.Drawing.Size(30, 20);
@@ -639,7 +634,6 @@
             // 
             // lblSurvival
             // 
-            this.lblSurvival.Enabled = false;
             this.lblSurvival.Location = new System.Drawing.Point(152, 526);
             this.lblSurvival.Name = "lblSurvival";
             this.lblSurvival.Size = new System.Drawing.Size(30, 20);
@@ -649,7 +643,6 @@
             // 
             // lblCHASkillsLable
             // 
-            this.lblCHASkillsLable.Enabled = false;
             this.lblCHASkillsLable.Location = new System.Drawing.Point(29, 546);
             this.lblCHASkillsLable.Name = "lblCHASkillsLable";
             this.lblCHASkillsLable.Size = new System.Drawing.Size(30, 20);
@@ -666,10 +659,10 @@
             this.chkCHASavingThrow.TabIndex = 74;
             this.chkCHASavingThrow.Text = "Saving Throw";
             this.chkCHASavingThrow.UseVisualStyleBackColor = true;
+            this.chkCHASavingThrow.CheckedChanged += new System.EventHandler(this.chkCHASavingThrow_CheckedChanged);
             // 
             // lblCHASavingThrow
             // 
-            this.lblCHASavingThrow.Enabled = false;
             this.lblCHASavingThrow.Location = new System.Drawing.Point(41, 589);
             this.lblCHASavingThrow.Name = "lblCHASavingThrow";
             this.lblCHASavingThrow.Size = new System.Drawing.Size(30, 20);
@@ -686,6 +679,7 @@
             this.chkDeception.TabIndex = 82;
             this.chkDeception.Text = "Deception";
             this.chkDeception.UseVisualStyleBackColor = true;
+            this.chkDeception.CheckedChanged += new System.EventHandler(this.chkDeception_CheckedChanged);
             // 
             // chkIntimidation
             // 
@@ -696,10 +690,10 @@
             this.chkIntimidation.TabIndex = 81;
             this.chkIntimidation.Text = "Intimidation";
             this.chkIntimidation.UseVisualStyleBackColor = true;
+            this.chkIntimidation.CheckedChanged += new System.EventHandler(this.chkIntimidation_CheckedChanged);
             // 
             // lblDeception
             // 
-            this.lblDeception.Enabled = false;
             this.lblDeception.Location = new System.Drawing.Point(152, 589);
             this.lblDeception.Name = "lblDeception";
             this.lblDeception.Size = new System.Drawing.Size(30, 20);
@@ -709,7 +703,6 @@
             // 
             // lblIntimidation
             // 
-            this.lblIntimidation.Enabled = false;
             this.lblIntimidation.Location = new System.Drawing.Point(41, 632);
             this.lblIntimidation.Name = "lblIntimidation";
             this.lblIntimidation.Size = new System.Drawing.Size(30, 20);
@@ -726,6 +719,7 @@
             this.chkPerformance.TabIndex = 84;
             this.chkPerformance.Text = "Performance";
             this.chkPerformance.UseVisualStyleBackColor = true;
+            this.chkPerformance.CheckedChanged += new System.EventHandler(this.chkPerformance_CheckedChanged);
             // 
             // chkPersuasion
             // 
@@ -736,10 +730,10 @@
             this.chkPersuasion.TabIndex = 80;
             this.chkPersuasion.Text = "Persuasion";
             this.chkPersuasion.UseVisualStyleBackColor = true;
+            this.chkPersuasion.CheckedChanged += new System.EventHandler(this.chkPersuasion_CheckedChanged);
             // 
             // lblPerformance
             // 
-            this.lblPerformance.Enabled = false;
             this.lblPerformance.Location = new System.Drawing.Point(152, 632);
             this.lblPerformance.Name = "lblPerformance";
             this.lblPerformance.Size = new System.Drawing.Size(30, 20);
@@ -749,7 +743,6 @@
             // 
             // lblPersuasion
             // 
-            this.lblPersuasion.Enabled = false;
             this.lblPersuasion.Location = new System.Drawing.Point(41, 675);
             this.lblPersuasion.Name = "lblPersuasion";
             this.lblPersuasion.Size = new System.Drawing.Size(30, 20);
@@ -892,7 +885,6 @@
             this.txtCHA.Name = "txtCHA";
             this.txtCHA.Size = new System.Drawing.Size(30, 20);
             this.txtCHA.TabIndex = 36;
-            this.txtCHA.Text = "XX";
             this.txtCHA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCHA.TextChanged += new System.EventHandler(this.txtCHA_TextChanged);
             // 
@@ -920,7 +912,6 @@
             this.txtWIS.Name = "txtWIS";
             this.txtWIS.Size = new System.Drawing.Size(30, 20);
             this.txtWIS.TabIndex = 33;
-            this.txtWIS.Text = "XX";
             this.txtWIS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtWIS.TextChanged += new System.EventHandler(this.txtWIS_TextChanged);
             // 
@@ -948,7 +939,6 @@
             this.txtINT.Name = "txtINT";
             this.txtINT.Size = new System.Drawing.Size(30, 20);
             this.txtINT.TabIndex = 30;
-            this.txtINT.Text = "XX";
             this.txtINT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtINT.TextChanged += new System.EventHandler(this.txtINT_TextChanged);
             // 
@@ -976,7 +966,6 @@
             this.txtCON.Name = "txtCON";
             this.txtCON.Size = new System.Drawing.Size(30, 20);
             this.txtCON.TabIndex = 27;
-            this.txtCON.Text = "XX";
             this.txtCON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCON.TextChanged += new System.EventHandler(this.txtCON_TextChanged);
             // 
@@ -1004,7 +993,6 @@
             this.txtDEX.Name = "txtDEX";
             this.txtDEX.Size = new System.Drawing.Size(30, 20);
             this.txtDEX.TabIndex = 24;
-            this.txtDEX.Text = "XX";
             this.txtDEX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDEX.TextChanged += new System.EventHandler(this.txtDEX_TextChanged);
             // 
@@ -1032,7 +1020,6 @@
             this.txtSTR.Name = "txtSTR";
             this.txtSTR.Size = new System.Drawing.Size(30, 20);
             this.txtSTR.TabIndex = 20;
-            this.txtSTR.Text = "XX";
             this.txtSTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSTR.TextChanged += new System.EventHandler(this.txtSTR_TextChanged);
             // 
@@ -1351,7 +1338,6 @@
             this.txtHP.Name = "txtHP";
             this.txtHP.Size = new System.Drawing.Size(30, 20);
             this.txtHP.TabIndex = 56;
-            this.txtHP.Text = "XX";
             this.txtHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label54
@@ -1484,7 +1470,6 @@
             this.txtAC.Name = "txtAC";
             this.txtAC.Size = new System.Drawing.Size(30, 20);
             this.txtAC.TabIndex = 63;
-            this.txtAC.Text = "XX";
             this.txtAC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSpeed
@@ -1493,7 +1478,6 @@
             this.txtSpeed.Name = "txtSpeed";
             this.txtSpeed.Size = new System.Drawing.Size(30, 20);
             this.txtSpeed.TabIndex = 64;
-            this.txtSpeed.Text = "XX";
             this.txtSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtInitative
@@ -1503,7 +1487,6 @@
             this.txtInitative.Name = "txtInitative";
             this.txtInitative.Size = new System.Drawing.Size(30, 20);
             this.txtInitative.TabIndex = 65;
-            this.txtInitative.Text = "XX";
             this.txtInitative.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panelSecondaryStats
