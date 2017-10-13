@@ -23,8 +23,7 @@ namespace DM_Assistant
         private string _Name;
         private string _Alignment;
         private string _Race;
-        // each bool represents a differnt skill
-        private bool[] _SkillsAray = new bool[24];
+        private string _Maker;
 
         //No constuctor relying on the Default Values
 
@@ -89,14 +88,10 @@ namespace DM_Assistant
             get { return _Race; }
             set { _Race = value; }
         }
-        //sets the skills array true if they are proficant false if not 
-        public void SetSkillsArray(int SkillNumber, bool SkillProficant)
+        public string Maker
         {
-            _SkillsAray[SkillNumber] = SkillProficant;
-        }
-        public bool GetSkillArray(int SkillNumber)
-        {
-            return _SkillsAray[SkillNumber];
+            get { return _Maker; }
+            set { _Maker = value; }
         }
     }
 }

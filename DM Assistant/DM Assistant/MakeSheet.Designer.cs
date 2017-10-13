@@ -170,7 +170,7 @@
             this.lblCurrencyLable = new System.Windows.Forms.Label();
             this.txtCurrency = new System.Windows.Forms.TextBox();
             this.lblAmunitionLable = new System.Windows.Forms.Label();
-            this.txtAmuntion = new System.Windows.Forms.TextBox();
+            this.txtAmmunition = new System.Windows.Forms.TextBox();
             this.lblArmorLable = new System.Windows.Forms.Label();
             this.txtArmor = new System.Windows.Forms.TextBox();
             this.lblWeaponsLable = new System.Windows.Forms.Label();
@@ -178,6 +178,7 @@
             this.btnSetSpells = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.SaveLocation = new System.Windows.Forms.SaveFileDialog();
             this.GrpSkills.SuspendLayout();
             this.pnlRaceSelect.SuspendLayout();
             this.pnlBaseinfo.SuspendLayout();
@@ -1308,6 +1309,7 @@
             this.chkChangeInitiative.TabIndex = 48;
             this.chkChangeInitiative.Text = "Changeable Initiative";
             this.chkChangeInitiative.UseVisualStyleBackColor = true;
+            this.chkChangeInitiative.Visible = false;
             // 
             // label46
             // 
@@ -1695,7 +1697,7 @@
             this.pnlInventory.Controls.Add(this.lblCurrencyLable);
             this.pnlInventory.Controls.Add(this.txtCurrency);
             this.pnlInventory.Controls.Add(this.lblAmunitionLable);
-            this.pnlInventory.Controls.Add(this.txtAmuntion);
+            this.pnlInventory.Controls.Add(this.txtAmmunition);
             this.pnlInventory.Controls.Add(this.lblArmorLable);
             this.pnlInventory.Controls.Add(this.txtArmor);
             this.pnlInventory.Controls.Add(this.lblWeaponsLable);
@@ -1746,18 +1748,18 @@
             this.lblAmunitionLable.AutoSize = true;
             this.lblAmunitionLable.Location = new System.Drawing.Point(85, 170);
             this.lblAmunitionLable.Name = "lblAmunitionLable";
-            this.lblAmunitionLable.Size = new System.Drawing.Size(53, 13);
+            this.lblAmunitionLable.Size = new System.Drawing.Size(61, 13);
             this.lblAmunitionLable.TabIndex = 69;
-            this.lblAmunitionLable.Text = "Amunition";
+            this.lblAmunitionLable.Text = "Ammunition";
             // 
-            // txtAmuntion
+            // txtAmmunition
             // 
-            this.txtAmuntion.Location = new System.Drawing.Point(21, 186);
-            this.txtAmuntion.Multiline = true;
-            this.txtAmuntion.Name = "txtAmuntion";
-            this.txtAmuntion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAmuntion.Size = new System.Drawing.Size(180, 60);
-            this.txtAmuntion.TabIndex = 70;
+            this.txtAmmunition.Location = new System.Drawing.Point(21, 186);
+            this.txtAmmunition.Multiline = true;
+            this.txtAmmunition.Name = "txtAmmunition";
+            this.txtAmmunition.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtAmmunition.Size = new System.Drawing.Size(180, 60);
+            this.txtAmmunition.TabIndex = 70;
             // 
             // lblArmorLable
             // 
@@ -2015,7 +2017,7 @@
         private System.Windows.Forms.Label lblCurrencyLable;
         private System.Windows.Forms.TextBox txtCurrency;
         private System.Windows.Forms.Label lblAmunitionLable;
-        private System.Windows.Forms.TextBox txtAmuntion;
+        private System.Windows.Forms.TextBox txtAmmunition;
         private System.Windows.Forms.Label lblArmorLable;
         private System.Windows.Forms.TextBox txtArmor;
         private System.Windows.Forms.Label lblWeaponsLable;
@@ -2023,5 +2025,6 @@
         private System.Windows.Forms.Button btnSetSpells;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.SaveFileDialog SaveLocation;
     }
 }

@@ -12,7 +12,22 @@ namespace DM_Assistant
         private int _EXP;
         private string _Class;
         private string _Background;
-        //Other player only features to be set later
+        private string _Feats;
+        private string _Traits;
+        private string _Proficiencies;
+        private string _Languages;
+        private string _PersonalityTraits;
+        private string _Ideals;
+        private string _Bonds;
+        private string _Flaws;
+        private string _Weapons;
+        private string _Currency;
+        private string _Armor;
+        private string _Tresures;
+        private string _Ammunition;
+
+        // each bool represents a differnt skill
+        private bool[] _SkillsAray = new bool[24];
 
         public Player()
             :base()
@@ -38,6 +53,80 @@ namespace DM_Assistant
         {
             get { return _Background; }
             set { _Background = value; }
+        }
+        public string Feats
+        {
+            get { return _Feats; }
+            set { _Feats = value; }
+        }
+        public string Traits
+        {
+            get { return _Traits; }
+            set { _Traits = value; }
+        }
+        public string Proficiencies
+        {
+            get { return _Proficiencies; }
+            set { _Proficiencies = value; }
+        }
+        public string Languages
+        {
+            get { return _Languages; }
+            set { _Languages = value; }
+        }
+        public string PersonalityTraits
+        {
+            get { return _PersonalityTraits; }
+            set { _PersonalityTraits = value; }
+        }
+        public string Ideals
+        {
+            get { return _Ideals; }
+            set { _Ideals = value; }
+        }
+        public string Bonds
+        {
+            get { return _Bonds; }
+            set { _Bonds = value; }
+        }
+        public string Flaws
+        {
+            get { return _Flaws; }
+            set { _Flaws = value; }
+        }
+        public string Weapons
+        {
+            get { return _Weapons; }
+            set { _Weapons = value; }
+        }
+        public string Currency
+        {
+            get { return _Currency; }
+            set { _Currency = value; }
+        }
+        public string Armor
+        {
+            get { return _Armor; }
+            set { _Armor = value; }
+        }
+        public string Tresures
+        {
+            get { return _Tresures; }
+            set { _Tresures = value; }
+        }
+        public string Ammunition
+        {
+            get { return _Ammunition; }
+            set { _Ammunition = value; }
+        }
+        //sets the skills array true if they are proficant false if not 
+        public void SetSkillsArray(int SkillNumber, bool SkillProficant)
+        {
+            _SkillsAray[SkillNumber] = SkillProficant;
+        }
+        public bool GetSkillArray(int SkillNumber)
+        {
+            return _SkillsAray[SkillNumber];
         }
     }
 }

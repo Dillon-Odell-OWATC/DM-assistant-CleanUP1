@@ -1172,6 +1172,32 @@ namespace DM_Assistant
 
         private void btnMake_Click(object sender, EventArgs e)
         {
+            string strAmmunition = txtAmmunition.Text;
+            string strArmor = txtArmor.Text;
+            string strTresures = txtTresures.Text;
+            string strCurrency = txtCurrency.Text;
+            string strWeapons = txtWeapons.Text;
+            string strFlaws = txtFlaws.Text;
+            string strBonds = txtBonds.Text;
+            string strIdeals = txtIdeals.Text;
+            string strPersonalityTraits = txtPersonalityTraits.Text;
+            string strLanguages = txtLanguages.Text;
+            string strProficiencies = txtProficiencies.Text;
+            string strTraits = txtTraits.Text;
+            string strFeats = txtFeats.Text;
+            NewPlayer.Ammunition = strAmmunition;
+            try
+            {
+                StreamWriter PlayerSheet;
+                SaveLocation.ShowDialog();
+                PlayerSheet = File.CreateText(SaveLocation.FileName);
+                PlayerSheet.WriteLine(txtAmmunition.Text);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
 
         }
 
