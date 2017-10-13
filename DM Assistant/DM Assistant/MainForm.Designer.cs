@@ -48,7 +48,7 @@
             this.btnMakeSheet.Name = "btnMakeSheet";
             this.btnMakeSheet.Size = new System.Drawing.Size(103, 43);
             this.btnMakeSheet.TabIndex = 1;
-            this.btnMakeSheet.Text = "Make \r\nMonsters /Players";
+            this.btnMakeSheet.Text = "Make \r\nPlayers";
             this.btnMakeSheet.UseVisualStyleBackColor = true;
             this.btnMakeSheet.Click += new System.EventHandler(this.btnMakeSheet_Click);
             // 
@@ -58,11 +58,11 @@
             this.btnDisplaySheet.Name = "btnDisplaySheet";
             this.btnDisplaySheet.Size = new System.Drawing.Size(103, 43);
             this.btnDisplaySheet.TabIndex = 2;
-            this.btnDisplaySheet.Text = "Display \r\nMonsters /Players";
+            this.btnDisplaySheet.Text = "Display \rPlayers";
             this.btnDisplaySheet.UseVisualStyleBackColor = true;
             this.btnDisplaySheet.Click += new System.EventHandler(this.btnDisplaySheet_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,7 +70,7 @@
             this.Controls.Add(this.btnDisplaySheet);
             this.Controls.Add(this.btnMakeSheet);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "DM Assistant";
             this.ResumeLayout(false);
             this.PerformLayout();

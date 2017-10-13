@@ -197,6 +197,7 @@
             this.btnMake.TabIndex = 0;
             this.btnMake.Text = "Make";
             this.btnMake.UseVisualStyleBackColor = true;
+            this.btnMake.Click += new System.EventHandler(this.btnMake_Click);
             // 
             // lblProficiency
             // 
@@ -1140,6 +1141,7 @@
             this.cmbAlignment.Name = "cmbAlignment";
             this.cmbAlignment.Size = new System.Drawing.Size(40, 21);
             this.cmbAlignment.TabIndex = 12;
+            this.cmbAlignment.SelectedIndexChanged += new System.EventHandler(this.cmbAlignment_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -1212,6 +1214,8 @@
             this.cmbBackground.Name = "cmbBackground";
             this.cmbBackground.Size = new System.Drawing.Size(121, 21);
             this.cmbBackground.TabIndex = 10;
+            this.cmbBackground.Text = "No Custom Suport";
+            this.cmbBackground.SelectedIndexChanged += new System.EventHandler(this.cmbBackground_SelectedIndexChanged);
             // 
             // txtEXP
             // 
@@ -1339,6 +1343,7 @@
             this.txtHP.Size = new System.Drawing.Size(30, 20);
             this.txtHP.TabIndex = 56;
             this.txtHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHP.TextChanged += new System.EventHandler(this.txtHP_TextChanged);
             // 
             // label54
             // 
@@ -1398,6 +1403,7 @@
             this.txtClass.Name = "txtClass";
             this.txtClass.Size = new System.Drawing.Size(100, 20);
             this.txtClass.TabIndex = 62;
+            this.txtClass.TextChanged += new System.EventHandler(this.txtClass_TextChanged);
             // 
             // label56
             // 
@@ -1414,6 +1420,7 @@
             this.txtRace.Name = "txtRace";
             this.txtRace.Size = new System.Drawing.Size(125, 20);
             this.txtRace.TabIndex = 61;
+            this.txtRace.TextChanged += new System.EventHandler(this.txtRace_TextChanged);
             // 
             // label55
             // 
@@ -1471,6 +1478,7 @@
             this.txtAC.Size = new System.Drawing.Size(30, 20);
             this.txtAC.TabIndex = 63;
             this.txtAC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAC.TextChanged += new System.EventHandler(this.txtAC_TextChanged);
             // 
             // txtSpeed
             // 
@@ -1479,6 +1487,7 @@
             this.txtSpeed.Size = new System.Drawing.Size(30, 20);
             this.txtSpeed.TabIndex = 64;
             this.txtSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSpeed.TextChanged += new System.EventHandler(this.txtSpeed_TextChanged);
             // 
             // txtInitative
             // 

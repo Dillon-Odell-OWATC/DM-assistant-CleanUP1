@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace DM_Assistant
 {
@@ -78,6 +79,7 @@ namespace DM_Assistant
             // used to keep the skills list up to date
             if (int.TryParse(txtEXP.Text, out intEXP))
             {
+                NewPlayer.EXP = intEXP;
                 if (intEXP > 355000)
                 {
                     lblLevel.Text = "20";
@@ -207,6 +209,10 @@ namespace DM_Assistant
 
                 }
             }
+            else
+            {
+                MessageBox.Show("only numbers for EXP please");
+            }
             SkillCheck();
         }
  
@@ -241,6 +247,10 @@ namespace DM_Assistant
                     lblSTR.Text = "+" + STR.ToString("0");
                 }
             }
+            else
+            {
+                MessageBox.Show("only numbers for STR please");
+            }
             STRSkillCheck();
         }
 
@@ -262,6 +272,10 @@ namespace DM_Assistant
                     txtInitative.Text ="+" + DEX.ToString("0");
                 }
             }
+            else
+            {
+                MessageBox.Show("only numbers for DEX please");
+            }
             DEXSkillCheck();
         }
 
@@ -280,6 +294,10 @@ namespace DM_Assistant
                 {
                     lblCON.Text = "+" + CON.ToString("0");
                 }
+            }
+            else
+            {
+                MessageBox.Show("only numbers for CON please");
             }
             CONSkillCheck();
         }
@@ -300,6 +318,10 @@ namespace DM_Assistant
                     lblINT.Text = "+" + INT.ToString("0");
                 }
             }
+            else
+            {
+                MessageBox.Show("only numbers for INT please");
+            }
             INTSkillCheck();
         }
 
@@ -318,6 +340,10 @@ namespace DM_Assistant
                 {
                     lblWIS.Text = "+" + WIS.ToString("0");
                 }
+            }
+            else
+            {
+                MessageBox.Show("only numbers for WIS please");
             }
             WISSkillCheck();
         }
@@ -338,8 +364,11 @@ namespace DM_Assistant
                     lblCHA.Text = "+" + CHA.ToString("0");
                 }
             }
+            else
+            {
+                MessageBox.Show("only numbers for CHA please");
+            }
             CHASkillCheck();
-            MessageBox.Show(NewPlayer.CHA.ToString());
         }
 
         private void cmbRace_SelectedIndexChanged(object sender, EventArgs e)
@@ -1139,6 +1168,70 @@ namespace DM_Assistant
         private void chkPersuasion_CheckedChanged(object sender, EventArgs e)
         {
             CHASkillCheck();
+        }
+
+        private void btnMake_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRace_TextChanged(object sender, EventArgs e)
+        {
+            NewPlayer.Race = txtRace.Text;
+        }
+
+        private void txtClass_TextChanged(object sender, EventArgs e)
+        {
+            NewPlayer.Class = txtClass.Text;
+        }
+
+        private void cmbBackground_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            NewPlayer.Background = cmbBackground.Text;
+        }
+
+        private void cmbAlignment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            NewPlayer.Alignment = cmbAlignment.Text;
+        }
+
+        private void txtSpeed_TextChanged(object sender, EventArgs e)
+        {
+            int intSpeed;
+            if (int.TryParse(txtSpeed.Text, out intSpeed))
+            {
+                NewPlayer.Speed = intSpeed;
+            }
+            else
+            {
+                MessageBox.Show("only numbers for Speed please");
+            }
+        }
+
+        private void txtAC_TextChanged(object sender, EventArgs e)
+        {
+            int intAC;
+            if (int.TryParse(txtAC.Text, out intAC))
+            {
+                NewPlayer.AC = intAC;
+            }
+            else
+            {
+                MessageBox.Show("only numbers for AC please");
+            }
+        }
+
+        private void txtHP_TextChanged(object sender, EventArgs e)
+        {
+            int intHP;
+            if (int.TryParse(txtHP.Text, out intHP))
+            {
+                NewPlayer.HP = intHP;
+            }
+            else
+            {
+                MessageBox.Show("only numbers for HP please");
+            }
         }
     }
 }
