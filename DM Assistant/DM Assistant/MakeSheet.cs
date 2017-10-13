@@ -207,7 +207,7 @@ namespace DM_Assistant
 
                 }
             }
-            SkillCeck();
+            SkillCheck();
         }
  
         //returns the mod for the skill panel
@@ -241,7 +241,7 @@ namespace DM_Assistant
                     lblSTR.Text = "+" + STR.ToString("0");
                 }
             }
-            SkillCeck();
+            STRSkillCheck();
         }
 
         private void txtDEX_TextChanged(object sender, EventArgs e)
@@ -262,7 +262,7 @@ namespace DM_Assistant
                     txtInitative.Text ="+" + DEX.ToString("0");
                 }
             }
-            SkillCeck();
+            DEXSkillCheck();
         }
 
         private void txtCON_TextChanged(object sender, EventArgs e)
@@ -281,7 +281,7 @@ namespace DM_Assistant
                     lblCON.Text = "+" + CON.ToString("0");
                 }
             }
-            SkillCeck();
+            CONSkillCheck();
         }
 
         private void txtINT_TextChanged(object sender, EventArgs e)
@@ -300,7 +300,7 @@ namespace DM_Assistant
                     lblINT.Text = "+" + INT.ToString("0");
                 }
             }
-            SkillCeck();
+            INTSkillCheck();
         }
 
         private void txtWIS_TextChanged(object sender, EventArgs e)
@@ -319,7 +319,7 @@ namespace DM_Assistant
                     lblWIS.Text = "+" + WIS.ToString("0");
                 }
             }
-            SkillCeck();
+            WISSkillCheck();
         }
 
         private void txtCHA_TextChanged(object sender, EventArgs e)
@@ -338,7 +338,8 @@ namespace DM_Assistant
                     lblCHA.Text = "+" + CHA.ToString("0");
                 }
             }
-            SkillCeck();
+            CHASkillCheck();
+            MessageBox.Show(NewPlayer.CHA.ToString());
         }
 
         private void cmbRace_SelectedIndexChanged(object sender, EventArgs e)
@@ -350,7 +351,7 @@ namespace DM_Assistant
         {
              
         }
-        private void SkillCeck()
+        private void STRSkillCheck()
         {
             int Mod;
             int SkillNumber = 0;
@@ -407,7 +408,11 @@ namespace DM_Assistant
                     lblAthletics.Text = "+" + Mod.ToString("0");
                 }
             }
-            //dex skills check 
+        }
+        private void DEXSkillCheck()
+        {
+            int SkillNumber = 1;
+            int Mod;
             //2
             SkillNumber++;
             if (chkDEXSavingThrow.Checked)
@@ -512,6 +517,11 @@ namespace DM_Assistant
                     lblStealth.Text = "+" + Mod.ToString("0");
                 }
             }
+        }
+        private void CONSkillCheck()
+        {
+            int SkillNumber = 5;
+            int Mod;
             //con skill check 
             //6
             SkillNumber++;
@@ -539,6 +549,12 @@ namespace DM_Assistant
                     lblCONSavingThrow.Text = "+" + Mod.ToString("0");
                 }
             }
+        }
+        private void INTSkillCheck()
+        {
+
+            int SkillNumber = 6;
+            int Mod;
             //INT skill check 
             //7
             SkillNumber++;
@@ -696,6 +712,11 @@ namespace DM_Assistant
                     lblReligion.Text = "+" + Mod.ToString("0");
                 }
             }
+        }
+        private void WISSkillCheck()
+        {
+            int SkillNumber = 12;
+            int Mod;
             //wis skill check 
             //13
             SkillNumber++;
@@ -853,6 +874,11 @@ namespace DM_Assistant
                     lblSurvival.Text = "+" + Mod.ToString("0");
                 }
             }
+        }
+        private void CHASkillCheck()
+        {
+            int SkillNumber = 18;
+            int Mod;
             //cha skill check 
             //19
             SkillNumber++;
@@ -985,125 +1011,134 @@ namespace DM_Assistant
                 }
             }
         }
+        private void SkillCheck()
+        {
+            STRSkillCheck();
+            DEXSkillCheck();
+            CONSkillCheck();
+            INTSkillCheck();
+            WISSkillCheck();
+            CHASkillCheck();
+        }
         //Checkboxes
         private void chkSTRSavingThrow_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            STRSkillCheck();
         }
 
         private void chkAthletics_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            STRSkillCheck();
         }
 
         private void chkDEXSavingThrow_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            DEXSkillCheck();
         }
 
         private void chkAcrobatics_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            DEXSkillCheck();
         }
 
         private void chkSleightOfHand_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            DEXSkillCheck();
         }
 
         private void chkStealth_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            DEXSkillCheck();
         }
 
         private void chkCONSavingThrow_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            CONSkillCheck();
         }
 
         private void chkINTSavingThrow_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            INTSkillCheck();
         }
 
         private void chkArcana_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            INTSkillCheck();
         }
 
         private void chkHistory_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            INTSkillCheck();
         }
 
         private void chkInvestigation_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            INTSkillCheck();
         }
 
         private void chkNature_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            INTSkillCheck();
         }
 
         private void chkReligion_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            INTSkillCheck();
         }
 
         private void chkWISSavingThrow_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            WISSkillCheck();
         }
 
         private void chkAnimalHandling_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            WISSkillCheck();
         }
 
         private void chkInsight_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            WISSkillCheck();
         }
 
         private void chkMedicine_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            WISSkillCheck();
         }
 
         private void chkPerception_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            WISSkillCheck();
         }
 
         private void chkSurvival_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            WISSkillCheck();
         }
 
         private void chkCHASavingThrow_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            CHASkillCheck();
         }
 
         private void chkDeception_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            CHASkillCheck();
         }
 
         private void chkIntimidation_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            CHASkillCheck();
         }
 
         private void chkPerformance_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            CHASkillCheck();
         }
 
         private void chkPersuasion_CheckedChanged(object sender, EventArgs e)
         {
-            SkillCeck();
+            CHASkillCheck();
         }
     }
 }

@@ -57,7 +57,7 @@ namespace DM_Assistant
         public int CHA
         {
             get { return _CHA; }
-            set { _STR = value; }
+            set { _CHA = value; }
         }
         public int HP
         {
