@@ -7,3 +7,4 @@ D:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Properties.Res
 D:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.csproj.GenerateResource.Cache
 D:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.exe
 D:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.pdb
+D:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.csprojResolveAssemblyReference.cache

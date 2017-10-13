@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace DM_Assistant
 {
@@ -1172,7 +1173,7 @@ namespace DM_Assistant
 
         private void btnMake_Click(object sender, EventArgs e)
         {
-            string strAmmunition = txtAmmunition.Text;
+            string strAmmunition = Regex.Replace(txtAmmunition.Text, @"\t|\r|\n", "<br>");
             string strArmor = txtArmor.Text;
             string strTresures = txtTresures.Text;
             string strCurrency = txtCurrency.Text;
@@ -1185,13 +1186,17 @@ namespace DM_Assistant
             string strProficiencies = txtProficiencies.Text;
             string strTraits = txtTraits.Text;
             string strFeats = txtFeats.Text;
-            NewPlayer.Ammunition = strAmmunition;
             try
             {
-                StreamWriter PlayerSheet;
+                SaveFileDialog SaveLocation = new SaveFileDialog();
                 SaveLocation.ShowDialog();
-                PlayerSheet = File.CreateText(SaveLocation.FileName);
-                PlayerSheet.WriteLine(txtAmmunition.Text);
+                if(SaveLocation.FileName != "")
+                {
+                    StreamWriter PlayerSheet = new StreamWriter(SaveLocation.FileName);
+                    PlayerSheet.Write(strAmmunition);
+                    PlayerSheet.Close();
+                }
+
             }
             catch(Exception ex)
             {

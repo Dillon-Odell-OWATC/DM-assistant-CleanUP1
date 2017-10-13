@@ -1758,6 +1758,7 @@
             this.txtAmmunition.Multiline = true;
             this.txtAmmunition.Name = "txtAmmunition";
             this.txtAmmunition.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtAmmunition.ShortcutsEnabled = false;
             this.txtAmmunition.Size = new System.Drawing.Size(180, 60);
             this.txtAmmunition.TabIndex = 70;
             // 
@@ -1825,13 +1826,18 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+            // SaveLocation
+            // 
+            this.SaveLocation.Filter = "txt Text | *.txt";
+            this.SaveLocation.Title = "Select where you want to save this sheet";
+            // 
             // MakeSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 10);
-            this.ClientSize = new System.Drawing.Size(801, 511);
+            this.ClientSize = new System.Drawing.Size(801, 711);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSetSpells);
