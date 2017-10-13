@@ -1174,9 +1174,9 @@ namespace DM_Assistant
         private void btnMake_Click(object sender, EventArgs e)
         {
             string strAmmunition = Regex.Replace(txtAmmunition.Text, @"\t|\r|\n", "<br>");
-            string strArmor = txtArmor.Text;
-            string strTresures = txtTresures.Text;
-            string strCurrency = txtCurrency.Text;
+            string strArmor = Regex.Replace(txtArmor.Text, @"\t|\r|\n", "<br>");
+            string strTresures = Regex.Replace(txtTresures.Text, @"\t|\r|\n", "<br>"); ;
+            string strCurrency = Regex.Replace(txtCurrency.Text, @"\t|\r|\n", "<br>"); ;
             string strWeapons = txtWeapons.Text;
             string strFlaws = txtFlaws.Text;
             string strBonds = txtBonds.Text;
@@ -1193,7 +1193,20 @@ namespace DM_Assistant
                 if(SaveLocation.FileName != "")
                 {
                     StreamWriter PlayerSheet = new StreamWriter(SaveLocation.FileName);
-                    PlayerSheet.Write(strAmmunition);
+                    PlayerSheet.WriteLine(NewPlayer.Name);
+                    PlayerSheet.WriteLine(NewPlayer.EXP);
+                    PlayerSheet.WriteLine(NewPlayer.Race);
+                    PlayerSheet.WriteLine(NewPlayer.Class);
+                    PlayerSheet.WriteLine(NewPlayer.Background);
+                    PlayerSheet.WriteLine(NewPlayer.Alignment);
+                    PlayerSheet.WriteLine(NewPlayer.STR);
+                    PlayerSheet.WriteLine(NewPlayer.DEX);
+                    PlayerSheet.WriteLine(NewPlayer.CON);
+                    PlayerSheet.WriteLine(NewPlayer.INT);
+                    PlayerSheet.WriteLine(NewPlayer.WIS);
+                    PlayerSheet.WriteLine(NewPlayer.CHA);
+                    PlayerSheet.WriteLine(strAmmunition);
+                    PlayerSheet.WriteLine(strArmor); 
                     PlayerSheet.Close();
                 }
 
@@ -1263,6 +1276,11 @@ namespace DM_Assistant
             {
                 MessageBox.Show("only numbers for HP please");
             }
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            NewPlayer.Name = txtName.Text;
         }
     }
 }
