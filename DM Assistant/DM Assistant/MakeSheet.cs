@@ -1044,7 +1044,7 @@ namespace DM_Assistant
             string strTresures = Regex.Replace(txtTresures.Text, @"\t|\r|\n", "<br>");
             string strCurrency = Regex.Replace(txtCurrency.Text, @"\t|\r|\n", "<br>");
             string strWeapons = Regex.Replace(txtWeapons.Text, @"\t|\r|\n", "<br>");
-            string strFlaws = Regex.Replace(txtFeats.Text, @"\t|\r|\n", "<br>");
+            string strFlaws = Regex.Replace(txtFlaws.Text, @"\t|\r|\n", "<br>");
             string strBonds = Regex.Replace(txtBonds.Text, @"\t|\r|\n", "<br>");
             string strIdeals = Regex.Replace(txtIdeals.Text, @"\t|\r|\n", "<br>");
             string strPersonalityTraits = Regex.Replace(txtPersonalityTraits.Text, @"\t|\r|\n", "<br>");
@@ -1059,6 +1059,7 @@ namespace DM_Assistant
                 SaveLocation.ShowDialog();
                 if (SaveLocation.FileName != "")
                 {
+                    //Number of skills
                     int CONSKILLSNUM = 24;
                     //makes the file and sets the save line order
                     StreamWriter PlayerSheet = new StreamWriter(SaveLocation.FileName);
@@ -1091,16 +1092,17 @@ namespace DM_Assistant
                     PlayerSheet.WriteLine(strArmor);
                     PlayerSheet.WriteLine(strAmmunition);
                     PlayerSheet.WriteLine(strOtherInventory);
+                    PlayerSheet.WriteLine(txtMaker.Text);
                     //Saves the Skill list
                     for (int I = 0; I < CONSKILLSNUM; I++)
                     {
                         if (NewPlayer.GetSkillArray(I))
                         {
-                            PlayerSheet.WriteLine("True" + I);
+                            PlayerSheet.WriteLine("True");
                         }
                         else
                         {
-                            PlayerSheet.WriteLine("False" + I);
+                            PlayerSheet.WriteLine("False");
                         }
                     }
                     PlayerSheet.Close();

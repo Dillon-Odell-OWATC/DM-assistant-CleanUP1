@@ -690,6 +690,12 @@ namespace DM_Assistant
             WISSkillCheck();
             CHASkillCheck();
         }
+        //Sets the skills after loading
+        private void SetSkillschk()
+        {
+            chkSTRSavingThrow.Checked = NewPlayer.GetSkillArray(0);
+            chkPersuasion.Checked = NewPlayer.GetSkillArray(23);
+        }
         //Functions for setting player attributes
         private void SetSTR()
         {
@@ -782,10 +788,13 @@ namespace DM_Assistant
         private void SetWIS()
         {
             int WIS;
+            int PassiveWis;
             if (int.TryParse(txtWIS.Text, out WIS))
             {
                 NewPlayer.WIS = WIS;
                 WIS = SetStatMod(WIS);
+                PassiveWis = 10 + WIS;
+                lblPassiveWisdom.Text = PassiveWis.ToString();
                 if (WIS <= 0)
                 {
                     lblWIS.Text = WIS.ToString("0");
@@ -1044,7 +1053,7 @@ namespace DM_Assistant
             string strTresures = Regex.Replace(txtTresures.Text, @"\t|\r|\n", "<br>");
             string strCurrency = Regex.Replace(txtCurrency.Text, @"\t|\r|\n", "<br>");
             string strWeapons = Regex.Replace(txtWeapons.Text, @"\t|\r|\n", "<br>");
-            string strFlaws = Regex.Replace(txtFeats.Text, @"\t|\r|\n", "<br>");
+            string strFlaws = Regex.Replace(txtFlaws.Text, @"\t|\r|\n", "<br>");
             string strBonds = Regex.Replace(txtBonds.Text, @"\t|\r|\n", "<br>");
             string strIdeals = Regex.Replace(txtIdeals.Text, @"\t|\r|\n", "<br>");
             string strPersonalityTraits = Regex.Replace(txtPersonalityTraits.Text, @"\t|\r|\n", "<br>");
@@ -1091,29 +1100,148 @@ namespace DM_Assistant
                     PlayerSheet.WriteLine(strArmor);
                     PlayerSheet.WriteLine(strAmmunition);
                     PlayerSheet.WriteLine(strOtherInventory);
+                    PlayerSheet.WriteLine(txtMaker.Text);
                     //Saves the Skill list
                     for (int I = 0; I < CONSKILLSNUM; I++)
                     {
                         if (NewPlayer.GetSkillArray(I))
                         {
-                            PlayerSheet.WriteLine("True" + I);
+                            PlayerSheet.WriteLine("True");
                         }
                         else
                         {
-                            PlayerSheet.WriteLine("False" + I);
+                            PlayerSheet.WriteLine("False");
                         }
                     }
                     PlayerSheet.Close();
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+        //lets user pick file location and load it
+        public void OpenFile()
+        {
+            OpenFileDialog OpenLocation = new OpenFileDialog();
+            OpenLocation.ShowDialog();
+            if (OpenLocation.FileName != "")
+            {
+                //Number of skills
+                int CONSKILLSNUM = 24;
+                int TempInt;
+                string TempString ="";
+                //Reads file and sets up the txtboxes labkes and checkboxes to the right values
+                try
+                {
+                    StreamReader PlayerSheet = new StreamReader(OpenLocation.FileName);
+                    txtName.Text = PlayerSheet.ReadLine();
+                    txtEXP.Text = PlayerSheet.ReadLine();
+                    lblRace.Text = PlayerSheet.ReadLine();
+                    txtClass.Text = PlayerSheet.ReadLine();
+                    lblBackground.Text = PlayerSheet.ReadLine();
+                    cmbAlignment.Text = PlayerSheet.ReadLine();
+                    if (int.TryParse(PlayerSheet.ReadLine(), out TempInt))
+                    {
+                        txtSTR.Text = TempInt.ToString();
+                    }
+                    if (int.TryParse(PlayerSheet.ReadLine(), out TempInt))
+                    {
+                        txtDEX.Text = TempInt.ToString();
+                    }
+                    if (int.TryParse(PlayerSheet.ReadLine(), out TempInt))
+                    {
+                        txtCON.Text = TempInt.ToString();
+                    }
+                    if (int.TryParse(PlayerSheet.ReadLine(), out TempInt))
+                    {
+                        txtINT.Text = TempInt.ToString();
+                    }
+                    if (int.TryParse(PlayerSheet.ReadLine(), out TempInt))
+                    {
+                        txtWIS.Text = TempInt.ToString();
+                    }
+                    if (int.TryParse(PlayerSheet.ReadLine(), out TempInt))
+                    {
+                        txtCHA.Text = TempInt.ToString();
+                    }
+                    if (int.TryParse(PlayerSheet.ReadLine(), out TempInt))
+                    {
+                        txtSpeed.Text = TempInt.ToString();
+                    }
+                    if (int.TryParse(PlayerSheet.ReadLine(), out TempInt))
+                    {
+                        txtAC.Text = TempInt.ToString();
+                    }
+                    if (int.TryParse(PlayerSheet.ReadLine(), out TempInt))
+                    {
+                        txtHP.Text = TempInt.ToString();
+                    }
+                    TempString = PlayerSheet.ReadLine();
+                    txtFeats.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    TempString = PlayerSheet.ReadLine();
+                    txtTraits.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    TempString = PlayerSheet.ReadLine();
+                    txtProficiencies.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    TempString = PlayerSheet.ReadLine();
+                    txtLanguages.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    TempString = PlayerSheet.ReadLine();
+                    txtPersonalityTraits.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    TempString = PlayerSheet.ReadLine();
+                    txtIdeals.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    TempString = PlayerSheet.ReadLine();
+                    txtBonds.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    TempString = PlayerSheet.ReadLine();
+                    txtFlaws.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    TempString = PlayerSheet.ReadLine();
+                    txtWeapons.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    TempString = PlayerSheet.ReadLine();
+                    txtCurrency.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    TempString = PlayerSheet.ReadLine();
+                    txtTresures.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    TempString = PlayerSheet.ReadLine();
+                    txtArmor.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    TempString = PlayerSheet.ReadLine();
+                    txtAmmunition.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    TempString = PlayerSheet.ReadLine();
+                    txtOtherInventory.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
+                    txtMaker.Text = PlayerSheet.ReadLine();
+                    for (int I = 0; I < CONSKILLSNUM; I++)
+                    {
+                        TempString = PlayerSheet.ReadLine();
+                        if (TempString == "True")
+                        {
+                            NewPlayer.SetSkillsArray(I, true);
+                        }
+                        else if (TempString == "False")
+                        {
+                            NewPlayer.SetSkillsArray(I, false);
+                        }
+                    }
+                    PlayerSheet.Close();
+                    SetSkillschk();
+                    SetSTR();
+                    SetDEX();
+                    SetCON();
+                    SetINT();
+                    SetWIS();
+                    SetCHA();
+                    SetEXP();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
 
         private void DisplayandEditSheet_Load(object sender, EventArgs e)
+        {
+            OpenFile();
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
         {
 
         }

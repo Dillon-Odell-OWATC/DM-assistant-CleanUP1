@@ -60,7 +60,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtClass = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
-            this.txtRace = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
             this.pnlBaseinfo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,7 +69,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtEXP = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmbBackground = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbAlignment = new System.Windows.Forms.ComboBox();
             this.pnlRaceSelect = new System.Windows.Forms.Panel();
@@ -142,7 +140,7 @@
             this.lblInsight = new System.Windows.Forms.Label();
             this.lblAnimalHandling = new System.Windows.Forms.Label();
             this.lblPerception = new System.Windows.Forms.Label();
-            this.btnMake = new System.Windows.Forms.Button();
+            this.btnModify = new System.Windows.Forms.Button();
             this.chkInsight = new System.Windows.Forms.CheckBox();
             this.GrpSkills = new System.Windows.Forms.GroupBox();
             this.chkAnimalHandling = new System.Windows.Forms.CheckBox();
@@ -181,6 +179,11 @@
             this.chkAthletics = new System.Windows.Forms.CheckBox();
             this.lblMakerLable = new System.Windows.Forms.Label();
             this.txtMaker = new System.Windows.Forms.TextBox();
+            this.lblPassiveWISLable = new System.Windows.Forms.Label();
+            this.lblPassiveWisdom = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.lblBackground = new System.Windows.Forms.Label();
+            this.lblRace = new System.Windows.Forms.Label();
             this.pnlClassSelect.SuspendLayout();
             this.panelStats.SuspendLayout();
             this.pnlBaseinfo.SuspendLayout();
@@ -519,13 +522,6 @@
             this.label56.TabIndex = 61;
             this.label56.Text = "Class";
             // 
-            // txtRace
-            // 
-            this.txtRace.Location = new System.Drawing.Point(375, 4);
-            this.txtRace.Name = "txtRace";
-            this.txtRace.Size = new System.Drawing.Size(125, 20);
-            this.txtRace.TabIndex = 2;
-            // 
             // label55
             // 
             this.label55.AutoSize = true;
@@ -537,10 +533,11 @@
             // 
             // pnlBaseinfo
             // 
+            this.pnlBaseinfo.Controls.Add(this.lblRace);
+            this.pnlBaseinfo.Controls.Add(this.lblBackground);
             this.pnlBaseinfo.Controls.Add(this.panel3);
             this.pnlBaseinfo.Controls.Add(this.txtClass);
             this.pnlBaseinfo.Controls.Add(this.label56);
-            this.pnlBaseinfo.Controls.Add(this.txtRace);
             this.pnlBaseinfo.Controls.Add(this.label55);
             this.pnlBaseinfo.Controls.Add(this.label1);
             this.pnlBaseinfo.Controls.Add(this.txtName);
@@ -549,7 +546,6 @@
             this.pnlBaseinfo.Controls.Add(this.label4);
             this.pnlBaseinfo.Controls.Add(this.txtEXP);
             this.pnlBaseinfo.Controls.Add(this.label5);
-            this.pnlBaseinfo.Controls.Add(this.cmbBackground);
             this.pnlBaseinfo.Controls.Add(this.label6);
             this.pnlBaseinfo.Controls.Add(this.cmbAlignment);
             this.pnlBaseinfo.Location = new System.Drawing.Point(12, 12);
@@ -572,6 +568,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 0;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label3
             // 
@@ -615,70 +612,6 @@
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Background";
-            // 
-            // cmbBackground
-            // 
-            this.cmbBackground.FormattingEnabled = true;
-            this.cmbBackground.Items.AddRange(new object[] {
-            "Acolyte",
-            "Black Fist Double Agent",
-            "Caravan Specialist",
-            "Charlatan",
-            "City Watch",
-            "Clan Crafter",
-            "Cloistered Scholar",
-            "Cormanthor Refugee",
-            "Courtier",
-            "Criminal",
-            "Dissenter",
-            "Dragon Casualty",
-            "Earthspur Miner",
-            "Entertainer",
-            "Faction Agent",
-            "Far Traveler",
-            "Folk Hero",
-            "Gate Urchin",
-            "Gladiator",
-            "Guild artisan",
-            "Guild Merchant",
-            "Harbofolk",
-            "Haunted One",
-            "Hermit",
-            "Hillsfar Merchant",
-            "Hillsfar smuggler",
-            "Inheritor",
-            "Initiate",
-            "Inquisitor",
-            "Investigator",
-            "Iron Route Bandit",
-            "Knight",
-            "Knight of the Order",
-            "Mercenary Veteran",
-            "Mulmaster Aristocrat",
-            "Noble",
-            "Outlander",
-            "Phlan Insurgent",
-            "Phlan Refugee",
-            "Pirate",
-            "Sage",
-            "Sailor",
-            "Secret Identity",
-            "Shade Fanatic",
-            "Soldier",
-            "Spy",
-            "Stojanow Prisoner",
-            "Ticklebelly Nomad",
-            "Trade Sheriff",
-            "Urban Bounty Hunter",
-            "Urchin",
-            "Uthgart Tribe Member",
-            "Vizier",
-            "Waterhavian Noble"});
-            this.cmbBackground.Location = new System.Drawing.Point(230, 30);
-            this.cmbBackground.Name = "cmbBackground";
-            this.cmbBackground.Size = new System.Drawing.Size(121, 21);
-            this.cmbBackground.TabIndex = 4;
-            this.cmbBackground.Text = "No Custom Suport";
             // 
             // label6
             // 
@@ -897,6 +830,7 @@
             this.txtCurrency.Location = new System.Drawing.Point(207, 28);
             this.txtCurrency.Multiline = true;
             this.txtCurrency.Name = "txtCurrency";
+            this.txtCurrency.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtCurrency.Size = new System.Drawing.Size(180, 60);
             this.txtCurrency.TabIndex = 1;
             this.txtCurrency.Text = "CP:\r\nSP:\r\nEP:\r\nGP:\r\nPP:";
@@ -1202,7 +1136,9 @@
             // 
             // panelSecondaryStats
             // 
+            this.panelSecondaryStats.Controls.Add(this.lblPassiveWisdom);
             this.panelSecondaryStats.Controls.Add(this.txtInitative);
+            this.panelSecondaryStats.Controls.Add(this.lblPassiveWISLable);
             this.panelSecondaryStats.Controls.Add(this.txtSpeed);
             this.panelSecondaryStats.Controls.Add(this.txtAC);
             this.panelSecondaryStats.Controls.Add(this.txtHP);
@@ -1213,7 +1149,7 @@
             this.panelSecondaryStats.Controls.Add(this.chkChangeInitiative);
             this.panelSecondaryStats.Location = new System.Drawing.Point(271, 73);
             this.panelSecondaryStats.Name = "panelSecondaryStats";
-            this.panelSecondaryStats.Size = new System.Drawing.Size(176, 81);
+            this.panelSecondaryStats.Size = new System.Drawing.Size(250, 81);
             this.panelSecondaryStats.TabIndex = 90;
             // 
             // lblPersuasion
@@ -1395,14 +1331,14 @@
             this.lblPerception.Text = "+0";
             this.lblPerception.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnMake
+            // btnModify
             // 
-            this.btnMake.Location = new System.Drawing.Point(625, 813);
-            this.btnMake.Name = "btnMake";
-            this.btnMake.Size = new System.Drawing.Size(75, 23);
-            this.btnMake.TabIndex = 81;
-            this.btnMake.Text = "Make";
-            this.btnMake.UseVisualStyleBackColor = true;
+            this.btnModify.Location = new System.Drawing.Point(625, 813);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(75, 23);
+            this.btnModify.TabIndex = 81;
+            this.btnModify.Text = "Modify";
+            this.btnModify.UseVisualStyleBackColor = true;
             // 
             // chkInsight
             // 
@@ -1809,10 +1745,51 @@
             // 
             // txtMaker
             // 
+            this.txtMaker.Enabled = false;
             this.txtMaker.Location = new System.Drawing.Point(522, 815);
             this.txtMaker.Name = "txtMaker";
             this.txtMaker.Size = new System.Drawing.Size(96, 20);
             this.txtMaker.TabIndex = 80;
+            // 
+            // lblPassiveWISLable
+            // 
+            this.lblPassiveWISLable.AutoSize = true;
+            this.lblPassiveWISLable.Location = new System.Drawing.Point(164, 8);
+            this.lblPassiveWISLable.Name = "lblPassiveWISLable";
+            this.lblPassiveWISLable.Size = new System.Drawing.Size(85, 13);
+            this.lblPassiveWISLable.TabIndex = 95;
+            this.lblPassiveWISLable.Text = "Passive Wisdom";
+            // 
+            // lblPassiveWisdom
+            // 
+            this.lblPassiveWisdom.Location = new System.Drawing.Point(188, 25);
+            this.lblPassiveWisdom.Name = "lblPassiveWisdom";
+            this.lblPassiveWisdom.Size = new System.Drawing.Size(30, 17);
+            this.lblPassiveWisdom.TabIndex = 85;
+            this.lblPassiveWisdom.Text = "+0";
+            this.lblPassiveWisdom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "OpenLocation";
+            // 
+            // lblBackground
+            // 
+            this.lblBackground.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBackground.Location = new System.Drawing.Point(232, 29);
+            this.lblBackground.Name = "lblBackground";
+            this.lblBackground.Size = new System.Drawing.Size(121, 21);
+            this.lblBackground.TabIndex = 95;
+            this.lblBackground.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblRace
+            // 
+            this.lblRace.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRace.Location = new System.Drawing.Point(375, 3);
+            this.lblRace.Name = "lblRace";
+            this.lblRace.Size = new System.Drawing.Size(125, 20);
+            this.lblRace.TabIndex = 96;
+            this.lblRace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DisplayandEditSheet
             // 
@@ -1832,7 +1809,7 @@
             this.Controls.Add(this.pnlPersonality);
             this.Controls.Add(this.pnlFeatsTraitsect);
             this.Controls.Add(this.panelSecondaryStats);
-            this.Controls.Add(this.btnMake);
+            this.Controls.Add(this.btnModify);
             this.Controls.Add(this.GrpSkills);
             this.Controls.Add(this.lblMakerLable);
             this.Controls.Add(this.txtMaker);
@@ -1896,7 +1873,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtClass;
         private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.TextBox txtRace;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Panel pnlBaseinfo;
         private System.Windows.Forms.Label label1;
@@ -1906,7 +1882,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtEXP;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbBackground;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbAlignment;
         private System.Windows.Forms.Panel pnlRaceSelect;
@@ -1978,7 +1953,7 @@
         private System.Windows.Forms.Label lblInsight;
         private System.Windows.Forms.Label lblAnimalHandling;
         private System.Windows.Forms.Label lblPerception;
-        private System.Windows.Forms.Button btnMake;
+        private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.CheckBox chkInsight;
         private System.Windows.Forms.GroupBox GrpSkills;
         private System.Windows.Forms.CheckBox chkAnimalHandling;
@@ -2017,5 +1992,10 @@
         private System.Windows.Forms.CheckBox chkAthletics;
         private System.Windows.Forms.Label lblMakerLable;
         private System.Windows.Forms.TextBox txtMaker;
+        private System.Windows.Forms.Label lblPassiveWisdom;
+        private System.Windows.Forms.Label lblPassiveWISLable;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label lblBackground;
+        private System.Windows.Forms.Label lblRace;
     }
 }

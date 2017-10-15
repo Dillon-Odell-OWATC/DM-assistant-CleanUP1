@@ -118,7 +118,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbAlignment = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmbBackground = new System.Windows.Forms.ComboBox();
             this.txtEXP = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblLevel = new System.Windows.Forms.Label();
@@ -181,6 +180,7 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.SaveLocation = new System.Windows.Forms.SaveFileDialog();
+            this.cmbBackground = new System.Windows.Forms.ComboBox();
             this.GrpSkills.SuspendLayout();
             this.pnlRaceSelect.SuspendLayout();
             this.pnlBaseinfo.SuspendLayout();
@@ -1154,71 +1154,6 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Background";
             // 
-            // cmbBackground
-            // 
-            this.cmbBackground.FormattingEnabled = true;
-            this.cmbBackground.Items.AddRange(new object[] {
-            "Acolyte",
-            "Black Fist Double Agent",
-            "Caravan Specialist",
-            "Charlatan",
-            "City Watch",
-            "Clan Crafter",
-            "Cloistered Scholar",
-            "Cormanthor Refugee",
-            "Courtier",
-            "Criminal",
-            "Dissenter",
-            "Dragon Casualty",
-            "Earthspur Miner",
-            "Entertainer",
-            "Faction Agent",
-            "Far Traveler",
-            "Folk Hero",
-            "Gate Urchin",
-            "Gladiator",
-            "Guild artisan",
-            "Guild Merchant",
-            "Harbofolk",
-            "Haunted One",
-            "Hermit",
-            "Hillsfar Merchant",
-            "Hillsfar smuggler",
-            "Inheritor",
-            "Initiate",
-            "Inquisitor",
-            "Investigator",
-            "Iron Route Bandit",
-            "Knight",
-            "Knight of the Order",
-            "Mercenary Veteran",
-            "Mulmaster Aristocrat",
-            "Noble",
-            "Outlander",
-            "Phlan Insurgent",
-            "Phlan Refugee",
-            "Pirate",
-            "Sage",
-            "Sailor",
-            "Secret Identity",
-            "Shade Fanatic",
-            "Soldier",
-            "Spy",
-            "Stojanow Prisoner",
-            "Ticklebelly Nomad",
-            "Trade Sheriff",
-            "Urban Bounty Hunter",
-            "Urchin",
-            "Uthgart Tribe Member",
-            "Vizier",
-            "Waterhavian Noble"});
-            this.cmbBackground.Location = new System.Drawing.Point(230, 30);
-            this.cmbBackground.Name = "cmbBackground";
-            this.cmbBackground.Size = new System.Drawing.Size(121, 21);
-            this.cmbBackground.TabIndex = 4;
-            this.cmbBackground.Text = "No Custom Suport";
-            this.cmbBackground.SelectedIndexChanged += new System.EventHandler(this.cmbBackground_SelectedIndexChanged);
-            // 
             // txtEXP
             // 
             this.txtEXP.Location = new System.Drawing.Point(277, 4);
@@ -1762,6 +1697,7 @@
             this.txtCurrency.Location = new System.Drawing.Point(207, 28);
             this.txtCurrency.Multiline = true;
             this.txtCurrency.Name = "txtCurrency";
+            this.txtCurrency.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtCurrency.Size = new System.Drawing.Size(180, 60);
             this.txtCurrency.TabIndex = 1;
             this.txtCurrency.Text = "CP:\r\nSP:\r\nEP:\r\nGP:\r\nPP:";
@@ -1855,6 +1791,71 @@
             // 
             this.SaveLocation.Filter = "txt Text | *.txt";
             this.SaveLocation.Title = "Select where you want to save this sheet";
+            // 
+            // cmbBackground
+            // 
+            this.cmbBackground.FormattingEnabled = true;
+            this.cmbBackground.Items.AddRange(new object[] {
+            "Acolyte",
+            "Black Fist Double Agent",
+            "Caravan Specialist",
+            "Charlatan",
+            "City Watch",
+            "Clan Crafter",
+            "Cloistered Scholar",
+            "Cormanthor Refugee",
+            "Courtier",
+            "Criminal",
+            "Dissenter",
+            "Dragon Casualty",
+            "Earthspur Miner",
+            "Entertainer",
+            "Faction Agent",
+            "Far Traveler",
+            "Folk Hero",
+            "Gate Urchin",
+            "Gladiator",
+            "Guild artisan",
+            "Guild Merchant",
+            "Harbofolk",
+            "Haunted One",
+            "Hermit",
+            "Hillsfar Merchant",
+            "Hillsfar smuggler",
+            "Inheritor",
+            "Initiate",
+            "Inquisitor",
+            "Investigator",
+            "Iron Route Bandit",
+            "Knight",
+            "Knight of the Order",
+            "Mercenary Veteran",
+            "Mulmaster Aristocrat",
+            "Noble",
+            "Outlander",
+            "Phlan Insurgent",
+            "Phlan Refugee",
+            "Pirate",
+            "Sage",
+            "Sailor",
+            "Secret Identity",
+            "Shade Fanatic",
+            "Soldier",
+            "Spy",
+            "Stojanow Prisoner",
+            "Ticklebelly Nomad",
+            "Trade Sheriff",
+            "Urban Bounty Hunter",
+            "Urchin",
+            "Uthgart Tribe Member",
+            "Vizier",
+            "Waterhavian Noble"});
+            this.cmbBackground.Location = new System.Drawing.Point(230, 30);
+            this.cmbBackground.Name = "cmbBackground";
+            this.cmbBackground.Size = new System.Drawing.Size(121, 21);
+            this.cmbBackground.TabIndex = 4;
+            this.cmbBackground.Text = "No Custom Suport";
+            this.cmbBackground.SelectedIndexChanged += new System.EventHandler(this.cmbBackground_SelectedIndexChanged);
             // 
             // MakeSheet
             // 
@@ -1995,7 +1996,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbAlignment;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbBackground;
         private System.Windows.Forms.TextBox txtEXP;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblLevel;
@@ -2058,5 +2058,6 @@
         private System.Windows.Forms.SaveFileDialog SaveLocation;
         private System.Windows.Forms.Label lblOtherInventoryLable;
         private System.Windows.Forms.TextBox txtOtherInventory;
+        private System.Windows.Forms.ComboBox cmbBackground;
     }
 }
