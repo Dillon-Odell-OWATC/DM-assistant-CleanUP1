@@ -8,3 +8,16 @@ D:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.csproj.Generat
 D:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.exe
 D:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.pdb
 D:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.csprojResolveAssemblyReference.cache
+E:\C#NET\Final\DM Assistant\DM Assistant\bin\Release\DM Assistant.exe.config
+E:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.exe
+E:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.pdb
+K:\C#NET\Final\DM Assistant\DM Assistant\bin\Release\DM Assistant.exe.config
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.exe
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.pdb
+K:\C#NET\Final\DM Assistant\DM Assistant\bin\Release\DM Assistant.exe
+K:\C#NET\Final\DM Assistant\DM Assistant\bin\Release\DM Assistant.pdb
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.csprojResolveAssemblyReference.cache
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM_Assistant.MainForm.resources
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM_Assistant.MakeSheet.resources
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Properties.Resources.resources
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Release\DM Assistant.csproj.GenerateResource.Cache

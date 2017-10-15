@@ -24,3 +24,14 @@ C:\Users\Dillion.O'dell\Desktop\DM-assistant-master(1)\DM-assistant-master\DM-as
 D:\C#NET\Final\DM-assistant-master\DM-assistant-master\DM-assistant-master\Final\DM Assistant\DM Assistant\bin\Debug\DM Assistant.exe.config
 D:\C#NET\Final\DM-assistant-master\DM-assistant-master\DM-assistant-master\Final\DM Assistant\DM Assistant\obj\Debug\DM Assistant.exe
 D:\C#NET\Final\DM-assistant-master\DM-assistant-master\DM-assistant-master\Final\DM Assistant\DM Assistant\obj\Debug\DM Assistant.pdb
+K:\C#NET\Final\DM Assistant\DM Assistant\bin\Debug\DM Assistant.exe.config
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM Assistant.exe
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM Assistant.pdb
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM Assistant.csprojResolveAssemblyReference.cache
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.MainForm.resources
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.MakeSheet.resources
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.Properties.Resources.resources
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM Assistant.csproj.GenerateResource.Cache
+K:\C#NET\Final\DM Assistant\DM Assistant\bin\Debug\DM Assistant.exe
+K:\C#NET\Final\DM Assistant\DM Assistant\bin\Debug\DM Assistant.pdb
+K:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.DisplayandEditSheet.resources

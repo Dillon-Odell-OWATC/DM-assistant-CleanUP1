@@ -165,6 +165,8 @@
             this.lblFeatsLable = new System.Windows.Forms.Label();
             this.txtFeats = new System.Windows.Forms.TextBox();
             this.pnlInventory = new System.Windows.Forms.Panel();
+            this.lblOtherInventoryLable = new System.Windows.Forms.Label();
+            this.txtOtherInventory = new System.Windows.Forms.TextBox();
             this.lblTresuresLable = new System.Windows.Forms.Label();
             this.txtTresures = new System.Windows.Forms.TextBox();
             this.lblCurrencyLable = new System.Windows.Forms.Label();
@@ -195,7 +197,7 @@
             this.btnMake.Location = new System.Drawing.Point(625, 813);
             this.btnMake.Name = "btnMake";
             this.btnMake.Size = new System.Drawing.Size(75, 23);
-            this.btnMake.TabIndex = 0;
+            this.btnMake.TabIndex = 1;
             this.btnMake.Text = "Make";
             this.btnMake.UseVisualStyleBackColor = true;
             this.btnMake.Click += new System.EventHandler(this.btnMake_Click);
@@ -870,7 +872,7 @@
             this.txtMaker.Location = new System.Drawing.Point(522, 815);
             this.txtMaker.Name = "txtMaker";
             this.txtMaker.Size = new System.Drawing.Size(96, 20);
-            this.txtMaker.TabIndex = 39;
+            this.txtMaker.TabIndex = 0;
             // 
             // label21
             // 
@@ -886,7 +888,7 @@
             this.txtCHA.Location = new System.Drawing.Point(183, 35);
             this.txtCHA.Name = "txtCHA";
             this.txtCHA.Size = new System.Drawing.Size(30, 20);
-            this.txtCHA.TabIndex = 36;
+            this.txtCHA.TabIndex = 5;
             this.txtCHA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCHA.TextChanged += new System.EventHandler(this.txtCHA_TextChanged);
             // 
@@ -913,7 +915,7 @@
             this.txtWIS.Location = new System.Drawing.Point(147, 35);
             this.txtWIS.Name = "txtWIS";
             this.txtWIS.Size = new System.Drawing.Size(30, 20);
-            this.txtWIS.TabIndex = 33;
+            this.txtWIS.TabIndex = 4;
             this.txtWIS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtWIS.TextChanged += new System.EventHandler(this.txtWIS_TextChanged);
             // 
@@ -940,7 +942,7 @@
             this.txtINT.Location = new System.Drawing.Point(111, 35);
             this.txtINT.Name = "txtINT";
             this.txtINT.Size = new System.Drawing.Size(30, 20);
-            this.txtINT.TabIndex = 30;
+            this.txtINT.TabIndex = 3;
             this.txtINT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtINT.TextChanged += new System.EventHandler(this.txtINT_TextChanged);
             // 
@@ -967,7 +969,7 @@
             this.txtCON.Location = new System.Drawing.Point(75, 35);
             this.txtCON.Name = "txtCON";
             this.txtCON.Size = new System.Drawing.Size(30, 20);
-            this.txtCON.TabIndex = 27;
+            this.txtCON.TabIndex = 2;
             this.txtCON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCON.TextChanged += new System.EventHandler(this.txtCON_TextChanged);
             // 
@@ -994,7 +996,7 @@
             this.txtDEX.Location = new System.Drawing.Point(39, 35);
             this.txtDEX.Name = "txtDEX";
             this.txtDEX.Size = new System.Drawing.Size(30, 20);
-            this.txtDEX.TabIndex = 24;
+            this.txtDEX.TabIndex = 1;
             this.txtDEX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDEX.TextChanged += new System.EventHandler(this.txtDEX_TextChanged);
             // 
@@ -1021,7 +1023,7 @@
             this.txtSTR.Location = new System.Drawing.Point(3, 35);
             this.txtSTR.Name = "txtSTR";
             this.txtSTR.Size = new System.Drawing.Size(30, 20);
-            this.txtSTR.TabIndex = 20;
+            this.txtSTR.TabIndex = 0;
             this.txtSTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSTR.TextChanged += new System.EventHandler(this.txtSTR_TextChanged);
             // 
@@ -1114,7 +1116,6 @@
             this.cmbRace.Name = "cmbRace";
             this.cmbRace.Size = new System.Drawing.Size(121, 21);
             this.cmbRace.TabIndex = 14;
-            this.cmbRace.SelectedIndexChanged += new System.EventHandler(this.cmbRace_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -1141,7 +1142,7 @@
             this.cmbAlignment.Location = new System.Drawing.Point(415, 30);
             this.cmbAlignment.Name = "cmbAlignment";
             this.cmbAlignment.Size = new System.Drawing.Size(40, 21);
-            this.cmbAlignment.TabIndex = 12;
+            this.cmbAlignment.TabIndex = 5;
             this.cmbAlignment.SelectedIndexChanged += new System.EventHandler(this.cmbAlignment_SelectedIndexChanged);
             // 
             // label5
@@ -1214,7 +1215,7 @@
             this.cmbBackground.Location = new System.Drawing.Point(230, 30);
             this.cmbBackground.Name = "cmbBackground";
             this.cmbBackground.Size = new System.Drawing.Size(121, 21);
-            this.cmbBackground.TabIndex = 10;
+            this.cmbBackground.TabIndex = 4;
             this.cmbBackground.Text = "No Custom Suport";
             this.cmbBackground.SelectedIndexChanged += new System.EventHandler(this.cmbBackground_SelectedIndexChanged);
             // 
@@ -1223,7 +1224,7 @@
             this.txtEXP.Location = new System.Drawing.Point(277, 4);
             this.txtEXP.Name = "txtEXP";
             this.txtEXP.Size = new System.Drawing.Size(54, 20);
-            this.txtEXP.TabIndex = 8;
+            this.txtEXP.TabIndex = 1;
             this.txtEXP.TextChanged += new System.EventHandler(this.txtEXP_TextChanged);
             // 
             // label4
@@ -1289,7 +1290,7 @@
             this.txtName.Location = new System.Drawing.Point(55, 4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 1;
+            this.txtName.TabIndex = 0;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label1
@@ -1344,7 +1345,7 @@
             this.txtHP.Location = new System.Drawing.Point(128, 24);
             this.txtHP.Name = "txtHP";
             this.txtHP.Size = new System.Drawing.Size(30, 20);
-            this.txtHP.TabIndex = 56;
+            this.txtHP.TabIndex = 2;
             this.txtHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtHP.TextChanged += new System.EventHandler(this.txtHP_TextChanged);
             // 
@@ -1405,7 +1406,7 @@
             this.txtClass.Location = new System.Drawing.Point(55, 30);
             this.txtClass.Name = "txtClass";
             this.txtClass.Size = new System.Drawing.Size(100, 20);
-            this.txtClass.TabIndex = 62;
+            this.txtClass.TabIndex = 3;
             this.txtClass.TextChanged += new System.EventHandler(this.txtClass_TextChanged);
             // 
             // label56
@@ -1422,7 +1423,7 @@
             this.txtRace.Location = new System.Drawing.Point(375, 4);
             this.txtRace.Name = "txtRace";
             this.txtRace.Size = new System.Drawing.Size(125, 20);
-            this.txtRace.TabIndex = 61;
+            this.txtRace.TabIndex = 2;
             this.txtRace.TextChanged += new System.EventHandler(this.txtRace_TextChanged);
             // 
             // label55
@@ -1479,7 +1480,7 @@
             this.txtAC.Location = new System.Drawing.Point(92, 24);
             this.txtAC.Name = "txtAC";
             this.txtAC.Size = new System.Drawing.Size(30, 20);
-            this.txtAC.TabIndex = 63;
+            this.txtAC.TabIndex = 1;
             this.txtAC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAC.TextChanged += new System.EventHandler(this.txtAC_TextChanged);
             // 
@@ -1488,7 +1489,7 @@
             this.txtSpeed.Location = new System.Drawing.Point(56, 24);
             this.txtSpeed.Name = "txtSpeed";
             this.txtSpeed.Size = new System.Drawing.Size(30, 20);
-            this.txtSpeed.TabIndex = 64;
+            this.txtSpeed.TabIndex = 0;
             this.txtSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSpeed.TextChanged += new System.EventHandler(this.txtSpeed_TextChanged);
             // 
@@ -1548,7 +1549,7 @@
             this.txtFlaws.Name = "txtFlaws";
             this.txtFlaws.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtFlaws.Size = new System.Drawing.Size(180, 60);
-            this.txtFlaws.TabIndex = 72;
+            this.txtFlaws.TabIndex = 3;
             // 
             // label25
             // 
@@ -1566,7 +1567,7 @@
             this.txtBonds.Name = "txtBonds";
             this.txtBonds.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtBonds.Size = new System.Drawing.Size(180, 60);
-            this.txtBonds.TabIndex = 70;
+            this.txtBonds.TabIndex = 2;
             // 
             // lblIdealsLable
             // 
@@ -1584,7 +1585,7 @@
             this.txtIdeals.Name = "txtIdeals";
             this.txtIdeals.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtIdeals.Size = new System.Drawing.Size(180, 60);
-            this.txtIdeals.TabIndex = 68;
+            this.txtIdeals.TabIndex = 1;
             // 
             // lblPersonalityTraitsLable
             // 
@@ -1602,7 +1603,7 @@
             this.txtPersonalityTraits.Name = "txtPersonalityTraits";
             this.txtPersonalityTraits.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtPersonalityTraits.Size = new System.Drawing.Size(180, 60);
-            this.txtPersonalityTraits.TabIndex = 64;
+            this.txtPersonalityTraits.TabIndex = 0;
             // 
             // pnlFeatsTraitsect
             // 
@@ -1635,7 +1636,7 @@
             this.txtLanguages.Name = "txtLanguages";
             this.txtLanguages.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtLanguages.Size = new System.Drawing.Size(180, 60);
-            this.txtLanguages.TabIndex = 72;
+            this.txtLanguages.TabIndex = 3;
             // 
             // label22
             // 
@@ -1653,7 +1654,7 @@
             this.txtProficiencies.Name = "txtProficiencies";
             this.txtProficiencies.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtProficiencies.Size = new System.Drawing.Size(180, 60);
-            this.txtProficiencies.TabIndex = 70;
+            this.txtProficiencies.TabIndex = 2;
             // 
             // lblTraitslable
             // 
@@ -1671,7 +1672,7 @@
             this.txtTraits.Name = "txtTraits";
             this.txtTraits.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtTraits.Size = new System.Drawing.Size(180, 60);
-            this.txtTraits.TabIndex = 68;
+            this.txtTraits.TabIndex = 1;
             // 
             // lblFeatsLable
             // 
@@ -1689,10 +1690,12 @@
             this.txtFeats.Name = "txtFeats";
             this.txtFeats.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtFeats.Size = new System.Drawing.Size(180, 60);
-            this.txtFeats.TabIndex = 64;
+            this.txtFeats.TabIndex = 0;
             // 
             // pnlInventory
             // 
+            this.pnlInventory.Controls.Add(this.lblOtherInventoryLable);
+            this.pnlInventory.Controls.Add(this.txtOtherInventory);
             this.pnlInventory.Controls.Add(this.lblTresuresLable);
             this.pnlInventory.Controls.Add(this.txtTresures);
             this.pnlInventory.Controls.Add(this.lblCurrencyLable);
@@ -1707,6 +1710,25 @@
             this.pnlInventory.Name = "pnlInventory";
             this.pnlInventory.Size = new System.Drawing.Size(409, 261);
             this.pnlInventory.TabIndex = 78;
+            // 
+            // lblOtherInventoryLable
+            // 
+            this.lblOtherInventoryLable.AutoSize = true;
+            this.lblOtherInventoryLable.Location = new System.Drawing.Point(257, 170);
+            this.lblOtherInventoryLable.Name = "lblOtherInventoryLable";
+            this.lblOtherInventoryLable.Size = new System.Drawing.Size(80, 13);
+            this.lblOtherInventoryLable.TabIndex = 75;
+            this.lblOtherInventoryLable.Text = "Other Inventory";
+            // 
+            // txtOtherInventory
+            // 
+            this.txtOtherInventory.Location = new System.Drawing.Point(207, 186);
+            this.txtOtherInventory.Multiline = true;
+            this.txtOtherInventory.Name = "txtOtherInventory";
+            this.txtOtherInventory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtOtherInventory.ShortcutsEnabled = false;
+            this.txtOtherInventory.Size = new System.Drawing.Size(180, 60);
+            this.txtOtherInventory.TabIndex = 5;
             // 
             // lblTresuresLable
             // 
@@ -1724,7 +1746,7 @@
             this.txtTresures.Name = "txtTresures";
             this.txtTresures.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtTresures.Size = new System.Drawing.Size(180, 60);
-            this.txtTresures.TabIndex = 74;
+            this.txtTresures.TabIndex = 3;
             // 
             // lblCurrencyLable
             // 
@@ -1741,7 +1763,7 @@
             this.txtCurrency.Multiline = true;
             this.txtCurrency.Name = "txtCurrency";
             this.txtCurrency.Size = new System.Drawing.Size(180, 60);
-            this.txtCurrency.TabIndex = 72;
+            this.txtCurrency.TabIndex = 1;
             this.txtCurrency.Text = "CP:\r\nSP:\r\nEP:\r\nGP:\r\nPP:";
             // 
             // lblAmunitionLable
@@ -1761,7 +1783,7 @@
             this.txtAmmunition.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAmmunition.ShortcutsEnabled = false;
             this.txtAmmunition.Size = new System.Drawing.Size(180, 60);
-            this.txtAmmunition.TabIndex = 70;
+            this.txtAmmunition.TabIndex = 4;
             // 
             // lblArmorLable
             // 
@@ -1779,7 +1801,7 @@
             this.txtArmor.Name = "txtArmor";
             this.txtArmor.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtArmor.Size = new System.Drawing.Size(180, 60);
-            this.txtArmor.TabIndex = 68;
+            this.txtArmor.TabIndex = 2;
             // 
             // lblWeaponsLable
             // 
@@ -1797,7 +1819,7 @@
             this.txtWeapons.Name = "txtWeapons";
             this.txtWeapons.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtWeapons.Size = new System.Drawing.Size(180, 60);
-            this.txtWeapons.TabIndex = 64;
+            this.txtWeapons.TabIndex = 0;
             // 
             // btnSetSpells
             // 
@@ -1814,18 +1836,20 @@
             this.btnReset.Location = new System.Drawing.Point(289, 842);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
-            this.btnReset.TabIndex = 80;
+            this.btnReset.TabIndex = 3;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(625, 842);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 81;
+            this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // SaveLocation
             // 
@@ -1856,7 +1880,6 @@
             this.Controls.Add(this.GrpSkills);
             this.Name = "MakeSheet";
             this.Text = "MakeSheet";
-            this.Load += new System.EventHandler(this.MakeSheet_Load);
             this.GrpSkills.ResumeLayout(false);
             this.GrpSkills.PerformLayout();
             this.pnlRaceSelect.ResumeLayout(false);
@@ -2033,5 +2056,7 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.SaveFileDialog SaveLocation;
+        private System.Windows.Forms.Label lblOtherInventoryLable;
+        private System.Windows.Forms.TextBox txtOtherInventory;
     }
 }
