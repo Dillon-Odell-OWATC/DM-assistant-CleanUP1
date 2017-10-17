@@ -71,6 +71,7 @@
             this.SaveLocation = new System.Windows.Forms.SaveFileDialog();
             this.txtEXP = new System.Windows.Forms.TextBox();
             this.lblEXP = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panelStats.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -456,7 +457,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(349, 385);
+            this.btnSave.Location = new System.Drawing.Point(288, 385);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 16;
@@ -487,11 +488,22 @@
             this.lblEXP.TabIndex = 10;
             this.lblEXP.Text = "EXP";
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(500, 385);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 74;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // MakeMonster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 419);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.chkLegandaryActions);
             this.Controls.Add(this.lblLALable);
@@ -561,5 +573,6 @@
         private System.Windows.Forms.SaveFileDialog SaveLocation;
         private System.Windows.Forms.TextBox txtEXP;
         private System.Windows.Forms.Label lblEXP;
+        private System.Windows.Forms.Button btnClose;
     }
 }

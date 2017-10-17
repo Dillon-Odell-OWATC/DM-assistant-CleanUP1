@@ -371,5 +371,10 @@ namespace DM_Assistant
         {
             SetEXP();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

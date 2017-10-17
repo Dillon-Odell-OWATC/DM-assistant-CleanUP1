@@ -75,6 +75,7 @@
             this.btnLoadNotes = new System.Windows.Forms.Button();
             this.OpenLocation = new System.Windows.Forms.OpenFileDialog();
             this.SaveLocation = new System.Windows.Forms.SaveFileDialog();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelStats.SuspendLayout();
             this.SuspendLayout();
@@ -491,7 +492,7 @@
             // 
             // btnSaveNotes
             // 
-            this.btnSaveNotes.Location = new System.Drawing.Point(201, 570);
+            this.btnSaveNotes.Location = new System.Drawing.Point(60, 570);
             this.btnSaveNotes.Name = "btnSaveNotes";
             this.btnSaveNotes.Size = new System.Drawing.Size(75, 23);
             this.btnSaveNotes.TabIndex = 88;
@@ -501,7 +502,7 @@
             // 
             // btnLoadNotes
             // 
-            this.btnLoadNotes.Location = new System.Drawing.Point(573, 570);
+            this.btnLoadNotes.Location = new System.Drawing.Point(150, 570);
             this.btnLoadNotes.Name = "btnLoadNotes";
             this.btnLoadNotes.Size = new System.Drawing.Size(75, 23);
             this.btnLoadNotes.TabIndex = 89;
@@ -518,11 +519,22 @@
             // 
             this.SaveLocation.Filter = "txt Text | *.txt";
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(714, 570);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 90;
+            this.btnExit.Text = "Close";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // ViewMonster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 613);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLoadNotes);
             this.Controls.Add(this.btnSaveNotes);
             this.Controls.Add(this.lblNotesLable);
@@ -598,5 +610,6 @@
         private System.Windows.Forms.Button btnLoadNotes;
         private System.Windows.Forms.OpenFileDialog OpenLocation;
         private System.Windows.Forms.SaveFileDialog SaveLocation;
+        private System.Windows.Forms.Button btnExit;
     }
 }
