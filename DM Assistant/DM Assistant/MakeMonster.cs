@@ -244,7 +244,42 @@ namespace DM_Assistant
                 MessageBox.Show("only numbers for AC please");
             }
         }
-
+        private void SaveMonster()
+        {
+            string strSkills = Regex.Replace(txtSkills.Text, @"\t|\r|\n", "<br>");
+            string strFeatsTraits = Regex.Replace(txtTraits.Text, @"\t|\r|\n", "<br>");
+            string strActions = Regex.Replace(txtAction.Text, @"\t|\r|\n", "<br>");
+            string strLegandaryActions = Regex.Replace(txtLegendaryActions.Text, @"\t|\r|\n", "<br>");
+            try
+            {
+                SaveFileDialog SaveLocation = new SaveFileDialog();
+                SaveLocation.ShowDialog();
+                if (SaveLocation.FileName != "")
+                {
+                    StreamWriter MonsterSheet = new StreamWriter(SaveLocation.FileName);
+                    MonsterSheet.WriteLine(NewMonster.Name);
+                    MonsterSheet.WriteLine(NewMonster.AC);
+                    MonsterSheet.WriteLine(NewMonster.HP);
+                    MonsterSheet.WriteLine(NewMonster.Speed);
+                    MonsterSheet.WriteLine(NewMonster.FlyingSpeed);
+                    MonsterSheet.WriteLine(NewMonster.STR);
+                    MonsterSheet.WriteLine(NewMonster.DEX);
+                    MonsterSheet.WriteLine(NewMonster.CON);
+                    MonsterSheet.WriteLine(NewMonster.INT);
+                    MonsterSheet.WriteLine(NewMonster.WIS);
+                    MonsterSheet.WriteLine(NewMonster.CHA);
+                    MonsterSheet.WriteLine(strSkills);
+                    MonsterSheet.WriteLine(strFeatsTraits);
+                    MonsterSheet.WriteLine(strActions);
+                    MonsterSheet.WriteLine(strLegandaryActions);
+                    MonsterSheet.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
 
         private void txtCHA_TextChanged(object sender, EventArgs e)
@@ -304,41 +339,7 @@ namespace DM_Assistant
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string strSkills = Regex.Replace(txtSkills.Text, @"\t|\r|\n", "<br>");
-            string strFeatsTraits = Regex.Replace(txtTraits.Text, @"\t|\r|\n", "<br>");
-            string strActions = Regex.Replace(txtAction.Text, @"\t|\r|\n", "<br>");
-            string strLegandaryActions = Regex.Replace(txtLegendaryActions.Text, @"\t|\r|\n", "<br>");
-            try
-            {
-                SaveFileDialog SaveLocation = new SaveFileDialog();
-                SaveLocation.ShowDialog();
-                if (SaveLocation.FileName != "")
-                {
-                    StreamWriter MonsterSheet = new StreamWriter(SaveLocation.FileName);
-                    MonsterSheet.WriteLine(NewMonster.Name);
-                    MonsterSheet.WriteLine(NewMonster.AC);
-                    MonsterSheet.WriteLine(NewMonster.HP);
-                    MonsterSheet.WriteLine(NewMonster.Speed);
-                    MonsterSheet.WriteLine(NewMonster.FlyingSpeed);
-                    MonsterSheet.WriteLine(NewMonster.STR);
-                    MonsterSheet.WriteLine(NewMonster.DEX);
-                    MonsterSheet.WriteLine(NewMonster.CON);
-                    MonsterSheet.WriteLine(NewMonster.INT);
-                    MonsterSheet.WriteLine(NewMonster.WIS);
-                    MonsterSheet.WriteLine(NewMonster.CHA);
-                    MonsterSheet.WriteLine(strSkills);
-                    MonsterSheet.WriteLine(strFeatsTraits);
-                    MonsterSheet.WriteLine(strActions);
-                    MonsterSheet.WriteLine(strLegandaryActions);
-
-
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            SaveMonster();
         }
 
         private void chkLegandaryActions_CheckedChanged(object sender, EventArgs e)

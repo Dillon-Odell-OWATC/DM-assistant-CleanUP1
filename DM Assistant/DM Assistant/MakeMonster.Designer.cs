@@ -87,7 +87,7 @@
             this.txtName.Location = new System.Drawing.Point(5, 19);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(228, 20);
-            this.txtName.TabIndex = 1;
+            this.txtName.TabIndex = 0;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtAC
@@ -95,8 +95,7 @@
             this.txtAC.Location = new System.Drawing.Point(5, 58);
             this.txtAC.Name = "txtAC";
             this.txtAC.Size = new System.Drawing.Size(28, 20);
-            this.txtAC.TabIndex = 3;
-            this.txtAC.Text = "XX";
+            this.txtAC.TabIndex = 1;
             this.txtAC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAC.TextChanged += new System.EventHandler(this.txtAC_TextChanged);
             // 
@@ -114,8 +113,7 @@
             this.txtHP.Location = new System.Drawing.Point(39, 58);
             this.txtHP.Name = "txtHP";
             this.txtHP.Size = new System.Drawing.Size(33, 20);
-            this.txtHP.TabIndex = 5;
-            this.txtHP.Text = "XXX";
+            this.txtHP.TabIndex = 2;
             this.txtHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtHP.TextChanged += new System.EventHandler(this.txtHP_TextChanged);
             // 
@@ -133,8 +131,7 @@
             this.txtSpeed.Location = new System.Drawing.Point(78, 58);
             this.txtSpeed.Name = "txtSpeed";
             this.txtSpeed.Size = new System.Drawing.Size(33, 20);
-            this.txtSpeed.TabIndex = 7;
-            this.txtSpeed.Text = "XXX";
+            this.txtSpeed.TabIndex = 3;
             this.txtSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSpeed.TextChanged += new System.EventHandler(this.txtSpeed_TextChanged);
             // 
@@ -152,8 +149,7 @@
             this.txtFlying.Location = new System.Drawing.Point(117, 58);
             this.txtFlying.Name = "txtFlying";
             this.txtFlying.Size = new System.Drawing.Size(33, 20);
-            this.txtFlying.TabIndex = 9;
-            this.txtFlying.Text = "XXX";
+            this.txtFlying.TabIndex = 4;
             this.txtFlying.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFlying.TextChanged += new System.EventHandler(this.txtFlying_TextChanged);
             // 
@@ -205,7 +201,7 @@
             this.txtSTR.Location = new System.Drawing.Point(3, 35);
             this.txtSTR.Name = "txtSTR";
             this.txtSTR.Size = new System.Drawing.Size(30, 20);
-            this.txtSTR.TabIndex = 0;
+            this.txtSTR.TabIndex = 5;
             this.txtSTR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSTR.TextChanged += new System.EventHandler(this.txtSTR_TextChanged);
             // 
@@ -232,7 +228,7 @@
             this.txtDEX.Location = new System.Drawing.Point(39, 35);
             this.txtDEX.Name = "txtDEX";
             this.txtDEX.Size = new System.Drawing.Size(30, 20);
-            this.txtDEX.TabIndex = 1;
+            this.txtDEX.TabIndex = 6;
             this.txtDEX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDEX.TextChanged += new System.EventHandler(this.txtDEX_TextChanged);
             // 
@@ -259,7 +255,7 @@
             this.txtCON.Location = new System.Drawing.Point(75, 35);
             this.txtCON.Name = "txtCON";
             this.txtCON.Size = new System.Drawing.Size(30, 20);
-            this.txtCON.TabIndex = 2;
+            this.txtCON.TabIndex = 7;
             this.txtCON.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCON.TextChanged += new System.EventHandler(this.txtCON_TextChanged);
             // 
@@ -286,7 +282,7 @@
             this.txtINT.Location = new System.Drawing.Point(111, 35);
             this.txtINT.Name = "txtINT";
             this.txtINT.Size = new System.Drawing.Size(30, 20);
-            this.txtINT.TabIndex = 3;
+            this.txtINT.TabIndex = 8;
             this.txtINT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtINT.TextChanged += new System.EventHandler(this.txtINT_TextChanged);
             // 
@@ -313,7 +309,7 @@
             this.txtWIS.Location = new System.Drawing.Point(147, 35);
             this.txtWIS.Name = "txtWIS";
             this.txtWIS.Size = new System.Drawing.Size(30, 20);
-            this.txtWIS.TabIndex = 4;
+            this.txtWIS.TabIndex = 9;
             this.txtWIS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtWIS.TextChanged += new System.EventHandler(this.txtWIS_TextChanged);
             // 
@@ -340,7 +336,7 @@
             this.txtCHA.Location = new System.Drawing.Point(183, 35);
             this.txtCHA.Name = "txtCHA";
             this.txtCHA.Size = new System.Drawing.Size(30, 20);
-            this.txtCHA.TabIndex = 5;
+            this.txtCHA.TabIndex = 10;
             this.txtCHA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCHA.TextChanged += new System.EventHandler(this.txtCHA_TextChanged);
             // 
@@ -386,7 +382,7 @@
             this.txtSkills.Name = "txtSkills";
             this.txtSkills.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtSkills.Size = new System.Drawing.Size(180, 60);
-            this.txtSkills.TabIndex = 10;
+            this.txtSkills.TabIndex = 11;
             // 
             // lblTraitslable
             // 
@@ -404,7 +400,7 @@
             this.txtTraits.Name = "txtTraits";
             this.txtTraits.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtTraits.Size = new System.Drawing.Size(180, 60);
-            this.txtTraits.TabIndex = 68;
+            this.txtTraits.TabIndex = 12;
             // 
             // txtAction
             // 
@@ -413,7 +409,7 @@
             this.txtAction.Name = "txtAction";
             this.txtAction.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAction.Size = new System.Drawing.Size(531, 160);
-            this.txtAction.TabIndex = 70;
+            this.txtAction.TabIndex = 13;
             // 
             // lblActionsLable
             // 
@@ -441,7 +437,7 @@
             this.txtLegendaryActions.Name = "txtLegendaryActions";
             this.txtLegendaryActions.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtLegendaryActions.Size = new System.Drawing.Size(531, 160);
-            this.txtLegendaryActions.TabIndex = 72;
+            this.txtLegendaryActions.TabIndex = 15;
             // 
             // chkLegandaryActions
             // 
@@ -449,7 +445,7 @@
             this.chkLegandaryActions.Location = new System.Drawing.Point(270, 197);
             this.chkLegandaryActions.Name = "chkLegandaryActions";
             this.chkLegandaryActions.Size = new System.Drawing.Size(114, 17);
-            this.chkLegandaryActions.TabIndex = 74;
+            this.chkLegandaryActions.TabIndex = 14;
             this.chkLegandaryActions.Text = "Legandary Actions";
             this.chkLegandaryActions.UseVisualStyleBackColor = true;
             this.chkLegandaryActions.CheckedChanged += new System.EventHandler(this.chkLegandaryActions_CheckedChanged);
@@ -459,10 +455,14 @@
             this.btnSave.Location = new System.Drawing.Point(349, 385);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 75;
+            this.btnSave.TabIndex = 16;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // SaveLocation
+            // 
+            this.SaveLocation.Filter = "txt Text | *.txt";
             // 
             // MakeMonster
             // 

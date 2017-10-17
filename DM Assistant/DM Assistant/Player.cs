@@ -27,7 +27,7 @@ namespace DM_Assistant
 
         // each bool represents a differnt skill
         private bool[] _SkillsAray = new bool[24];
-
+        private bool[] tempSkillArray = new bool[24];
         public Player()
             :base()
         {
@@ -118,10 +118,11 @@ namespace DM_Assistant
         public void SetSkillsArray(int SkillNumber, bool SkillProficant)
         {
             _SkillsAray[SkillNumber] = SkillProficant;
+            tempSkillArray[SkillNumber] = _SkillsAray[SkillNumber];
         }
         public bool GetSkillArray(int SkillNumber)
         {
-            return _SkillsAray[SkillNumber];
+            return tempSkillArray[SkillNumber];
         }
     }
 }

@@ -37,3 +37,15 @@ K:\C#NET\Final\DM Assistant\DM Assistant\bin\Debug\DM Assistant.pdb
 K:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.DisplayandEditSheet.resources
 D:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.DisplayandEditSheet.resources
 D:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.MakeMonster.resources
+C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\bin\Debug\DM Assistant.exe.config
+C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Debug\DM Assistant.exe
+C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Debug\DM Assistant.pdb
+C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\bin\Debug\DM Assistant.exe
+C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\bin\Debug\DM Assistant.pdb
+C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Debug\DM Assistant.csprojResolveAssemblyReference.cache
+C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.DisplayandEditSheet.resources
+C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.MainForm.resources
+C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.MakeMonster.resources
+C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.MakeSheet.resources
+C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.Properties.Resources.resources
+C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Debug\DM Assistant.csproj.GenerateResource.Cache

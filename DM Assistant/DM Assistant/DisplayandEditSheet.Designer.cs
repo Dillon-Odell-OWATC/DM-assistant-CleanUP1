@@ -762,6 +762,7 @@
             this.txtSpeed.Size = new System.Drawing.Size(30, 20);
             this.txtSpeed.TabIndex = 0;
             this.txtSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSpeed.TextChanged += new System.EventHandler(this.txtSpeed_TextChanged);
             // 
             // txtAC
             // 
@@ -770,6 +771,7 @@
             this.txtAC.Size = new System.Drawing.Size(30, 20);
             this.txtAC.TabIndex = 1;
             this.txtAC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAC.TextChanged += new System.EventHandler(this.txtAC_TextChanged);
             // 
             // txtProficiencies
             // 
@@ -1097,6 +1099,7 @@
             this.txtHP.Size = new System.Drawing.Size(30, 20);
             this.txtHP.TabIndex = 2;
             this.txtHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHP.TextChanged += new System.EventHandler(this.txtHP_TextChanged);
             // 
             // label54
             // 

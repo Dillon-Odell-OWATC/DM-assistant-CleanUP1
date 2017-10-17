@@ -20,6 +20,7 @@ namespace DM_Assistant
         }
         //declairing the player class
         Player NewPlayer = new Player();
+        CheckBox[] chk = new CheckBox[24];
         //Slill Checks check to see what skills are checkboxed and sets the newplayer object correctly sets the corresponding lables to display correct values
         private void STRSkillCheck()
         {
@@ -694,53 +695,53 @@ namespace DM_Assistant
         private void SetSkillschk()
         {
             int SkillNum = 0;
-            chkSTRSavingThrow.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkSTRSavingThrow;
             SkillNum++;
-            chkAthletics.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkAthletics;
             SkillNum++;
-            chkDEXSavingThrow.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkDEXSavingThrow;
             SkillNum++;
-            chkAcrobatics.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkAcrobatics;
             SkillNum++;
-            chkSleightOfHand.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkSleightOfHand;
             SkillNum++;
-            chkStealth.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkStealth;
             SkillNum++;
-            chkCONSavingThrow.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkCONSavingThrow;
             SkillNum++;
-            chkINTSavingThrow.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkINTSavingThrow;
             SkillNum++;
-            chkArcana.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkArcana;
             SkillNum++;
-            chkHistory.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkHistory;
             SkillNum++;
-            chkInvestigation.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkInvestigation;
             SkillNum++;
-            chkNature.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkNature;
             SkillNum++;
-            chkReligion.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkReligion;
             SkillNum++;
-            chkWISSavingThrow.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkWISSavingThrow;
             SkillNum++;
-            chkAnimalHandling.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkAnimalHandling;
             SkillNum++;
-            chkInsight.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkInsight;
             SkillNum++;
-            chkMedicine.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkMedicine;
             SkillNum++;
-            chkPerception.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkPerception;
             SkillNum++;
-            chkSurvival.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkSurvival;
             SkillNum++;
-            chkCHASavingThrow.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkCHASavingThrow;
             SkillNum++;
-            chkDeception.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkDeception;
             SkillNum++;
-            chkIntimidation.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkIntimidation;
             SkillNum++;
-            chkPerformance.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkPerformance;
             SkillNum++;
-            chkPersuasion.Checked = NewPlayer.GetSkillArray(SkillNum);
+            chk[SkillNum] = chkPersuasion;
         }
         //Functions for setting player attributes
         private void SetSTR()
@@ -877,6 +878,42 @@ namespace DM_Assistant
                 MessageBox.Show("only numbers for CHA please");
             }
             CHASkillCheck();
+        }
+        private void SetSpeed()
+        {
+            int Speed;
+            if (int.TryParse(txtSpeed.Text, out Speed))
+            {
+                NewPlayer.Speed = Speed;
+            }
+            else if (txtSpeed.Text != "")
+            {
+                MessageBox.Show("only numbers for Speed please");
+            }
+        }
+        private void SetHP()
+        {
+            int HP;
+            if (int.TryParse(txtHP.Text, out HP))
+            {
+                NewPlayer.HP = HP;
+            }
+            else if (txtHP.Text != "")
+            {
+                MessageBox.Show("only numbers for HP please");
+            }
+        }
+        private void SetAC()
+        {
+            int AC;
+            if (int.TryParse(txtAC.Text, out AC))
+            {
+                NewPlayer.AC = AC;
+            }
+            else if (txtAC.Text != "")
+            {
+                MessageBox.Show("only numbers for AC please");
+            }
         }
         //Sets StatMod Accoding to stat level
         private int SetStatMod(int Stat)
@@ -1250,20 +1287,23 @@ namespace DM_Assistant
                     TempString = PlayerSheet.ReadLine();
                     txtOtherInventory.Text = TempString.Replace("<br><br>", System.Environment.NewLine);
                     txtMaker.Text = PlayerSheet.ReadLine();
-                    for (int I = 0; I < CONSKILLSNUM; I++)
+                    SetSkillschk();
+                    for (int I = 0; I <= CONSKILLSNUM; I++)
                     {
                         TempString = PlayerSheet.ReadLine();
                         if (TempString == "True")
                         {
                             NewPlayer.SetSkillsArray(I, true);
+                            chk[I].Checked = true;
+
                         }
                         else if (TempString == "False")
                         {
                             NewPlayer.SetSkillsArray(I, false);
+                            chk[I].Checked = false;
                         }
                     }
                     PlayerSheet.Close();
-                    SetSkillschk();
                     SetSTR();
                     SetDEX();
                     SetCON();
@@ -1427,6 +1467,21 @@ namespace DM_Assistant
         private void cmbAlignment_SelectedIndexChanged(object sender, EventArgs e)
         {
             NewPlayer.Alignment = cmbAlignment.Text;
+        }
+
+        private void txtSpeed_TextChanged(object sender, EventArgs e)
+        {
+            SetSpeed();
+        }
+
+        private void txtAC_TextChanged(object sender, EventArgs e)
+        {
+            SetAC();
+        }
+
+        private void txtHP_TextChanged(object sender, EventArgs e)
+        {
+            SetHP();
         }
     }
 }
