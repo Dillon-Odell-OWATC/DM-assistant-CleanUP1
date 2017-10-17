@@ -33,5 +33,11 @@ namespace DM_Assistant
             MakeMonster frmMakeMonster = new MakeMonster();
             frmMakeMonster.ShowDialog();
         }
+
+        private void btnDisplayMonster_Click(object sender, EventArgs e)
+        {
+            ViewMonster frmViewMonster = new ViewMonster();
+            frmViewMonster.Show();
+        }
     }
 }

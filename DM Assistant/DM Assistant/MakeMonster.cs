@@ -232,6 +232,18 @@ namespace DM_Assistant
                 MessageBox.Show("only numbers for HP please");
             }
         }
+        private void SetEXP()
+        {
+            int EXP;
+            if (int.TryParse(txtEXP.Text, out EXP))
+            {
+                NewMonster.EXP = EXP;
+            }
+            else if (txtEXP.Text != "")
+            {
+                MessageBox.Show("only numbers for EXP please");
+            }
+        }
         private void SetAC()
         {
             int AC;
@@ -262,6 +274,7 @@ namespace DM_Assistant
                     MonsterSheet.WriteLine(NewMonster.HP);
                     MonsterSheet.WriteLine(NewMonster.Speed);
                     MonsterSheet.WriteLine(NewMonster.FlyingSpeed);
+                    MonsterSheet.WriteLine(NewMonster.EXP);
                     MonsterSheet.WriteLine(NewMonster.STR);
                     MonsterSheet.WriteLine(NewMonster.DEX);
                     MonsterSheet.WriteLine(NewMonster.CON);
@@ -352,6 +365,11 @@ namespace DM_Assistant
             {
                 txtLegendaryActions.Enabled = false;
             }
+        }
+
+        private void txtEXP_TextChanged(object sender, EventArgs e)
+        {
+            SetEXP();
         }
     }
 }

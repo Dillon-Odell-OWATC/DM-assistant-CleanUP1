@@ -82,6 +82,7 @@
             this.btnDisplayMonster.TabIndex = 4;
             this.btnDisplayMonster.Text = "Display\r\nMonsters";
             this.btnDisplayMonster.UseVisualStyleBackColor = true;
+            this.btnDisplayMonster.Click += new System.EventHandler(this.btnDisplayMonster_Click);
             // 
             // MainForm
             // 

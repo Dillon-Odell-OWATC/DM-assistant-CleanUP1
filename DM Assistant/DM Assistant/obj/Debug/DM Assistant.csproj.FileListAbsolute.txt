@@ -49,3 +49,4 @@ C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assis
 C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.MakeSheet.resources
 C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.Properties.Resources.resources
 C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Debug\DM Assistant.csproj.GenerateResource.Cache
+C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.ViewMonster.resources

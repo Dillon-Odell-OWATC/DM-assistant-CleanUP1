@@ -69,6 +69,8 @@
             this.chkLegandaryActions = new System.Windows.Forms.CheckBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.SaveLocation = new System.Windows.Forms.SaveFileDialog();
+            this.txtEXP = new System.Windows.Forms.TextBox();
+            this.lblEXP = new System.Windows.Forms.Label();
             this.panelStats.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -351,6 +353,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtEXP);
+            this.panel1.Controls.Add(this.lblEXP);
             this.panel1.Controls.Add(this.txtFlying);
             this.panel1.Controls.Add(this.lblFlying);
             this.panel1.Controls.Add(this.txtSpeed);
@@ -464,6 +468,25 @@
             // 
             this.SaveLocation.Filter = "txt Text | *.txt";
             // 
+            // txtEXP
+            // 
+            this.txtEXP.Location = new System.Drawing.Point(156, 58);
+            this.txtEXP.Name = "txtEXP";
+            this.txtEXP.Size = new System.Drawing.Size(77, 20);
+            this.txtEXP.TabIndex = 9;
+            this.txtEXP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEXP.TextChanged += new System.EventHandler(this.txtEXP_TextChanged);
+            // 
+            // lblEXP
+            // 
+            this.lblEXP.AutoSize = true;
+            this.lblEXP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblEXP.Location = new System.Drawing.Point(179, 42);
+            this.lblEXP.Name = "lblEXP";
+            this.lblEXP.Size = new System.Drawing.Size(28, 13);
+            this.lblEXP.TabIndex = 10;
+            this.lblEXP.Text = "EXP";
+            // 
             // MakeMonster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -536,5 +559,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtFlying;
         private System.Windows.Forms.SaveFileDialog SaveLocation;
+        private System.Windows.Forms.TextBox txtEXP;
+        private System.Windows.Forms.Label lblEXP;
     }
 }
