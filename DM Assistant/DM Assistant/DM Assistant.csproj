@@ -59,12 +59,19 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MakeMonster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakeMonster.Designer.cs">
+      <DependentUpon>MakeMonster.cs</DependentUpon>
+    </Compile>
     <Compile Include="MakeSheet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MakeSheet.Designer.cs">
       <DependentUpon>MakeSheet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Monster.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakeMonster.resx">
+      <DependentUpon>MakeMonster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MakeSheet.resx">
       <DependentUpon>MakeSheet.cs</DependentUpon>

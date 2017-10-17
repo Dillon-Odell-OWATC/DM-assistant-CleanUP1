@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnMakeSheet = new System.Windows.Forms.Button();
             this.btnDisplaySheet = new System.Windows.Forms.Button();
+            this.btnMakeMonsters = new System.Windows.Forms.Button();
+            this.btnDisplayMonster = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -62,11 +64,31 @@
             this.btnDisplaySheet.UseVisualStyleBackColor = true;
             this.btnDisplaySheet.Click += new System.EventHandler(this.btnDisplaySheet_Click);
             // 
+            // btnMakeMonsters
+            // 
+            this.btnMakeMonsters.Location = new System.Drawing.Point(29, 78);
+            this.btnMakeMonsters.Name = "btnMakeMonsters";
+            this.btnMakeMonsters.Size = new System.Drawing.Size(103, 43);
+            this.btnMakeMonsters.TabIndex = 3;
+            this.btnMakeMonsters.Text = "Make\r\nMonsters";
+            this.btnMakeMonsters.UseVisualStyleBackColor = true;
+            // 
+            // btnDisplayMonster
+            // 
+            this.btnDisplayMonster.Location = new System.Drawing.Point(138, 78);
+            this.btnDisplayMonster.Name = "btnDisplayMonster";
+            this.btnDisplayMonster.Size = new System.Drawing.Size(103, 43);
+            this.btnDisplayMonster.TabIndex = 4;
+            this.btnDisplayMonster.Text = "Display\r\nMonsters";
+            this.btnDisplayMonster.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(271, 80);
+            this.ClientSize = new System.Drawing.Size(271, 133);
+            this.Controls.Add(this.btnDisplayMonster);
+            this.Controls.Add(this.btnMakeMonsters);
             this.Controls.Add(this.btnDisplaySheet);
             this.Controls.Add(this.btnMakeSheet);
             this.Controls.Add(this.label1);
@@ -82,6 +104,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMakeSheet;
         private System.Windows.Forms.Button btnDisplaySheet;
+        private System.Windows.Forms.Button btnMakeMonsters;
+        private System.Windows.Forms.Button btnDisplayMonster;
     }
 }
 

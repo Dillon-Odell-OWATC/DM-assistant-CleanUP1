@@ -20,6 +20,8 @@ namespace DM_Assistant
         private int _HP;
         private int _AC;
         private int _Speed;
+        private int _EXP;
+
         private string _Name;
         private string _Alignment;
         private string _Race;
@@ -92,6 +94,11 @@ namespace DM_Assistant
         {
             get { return _Maker; }
             set { _Maker = value; }
+        }
+        public int EXP
+        {
+            get { return _EXP; }
+            set { _EXP = value; }
         }
     }
 }

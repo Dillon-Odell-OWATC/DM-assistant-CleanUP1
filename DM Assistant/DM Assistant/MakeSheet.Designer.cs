@@ -139,6 +139,7 @@
             this.label56 = new System.Windows.Forms.Label();
             this.txtRace = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
+            this.cmbBackground = new System.Windows.Forms.ComboBox();
             this.panelStats = new System.Windows.Forms.Panel();
             this.pnlClassSelect = new System.Windows.Forms.Panel();
             this.txtAC = new System.Windows.Forms.TextBox();
@@ -180,7 +181,6 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.SaveLocation = new System.Windows.Forms.SaveFileDialog();
-            this.cmbBackground = new System.Windows.Forms.ComboBox();
             this.GrpSkills.SuspendLayout();
             this.pnlRaceSelect.SuspendLayout();
             this.pnlBaseinfo.SuspendLayout();
@@ -1370,6 +1370,71 @@
             this.label55.TabIndex = 43;
             this.label55.Text = "Race";
             // 
+            // cmbBackground
+            // 
+            this.cmbBackground.FormattingEnabled = true;
+            this.cmbBackground.Items.AddRange(new object[] {
+            "Acolyte",
+            "Black Fist Double Agent",
+            "Caravan Specialist",
+            "Charlatan",
+            "City Watch",
+            "Clan Crafter",
+            "Cloistered Scholar",
+            "Cormanthor Refugee",
+            "Courtier",
+            "Criminal",
+            "Dissenter",
+            "Dragon Casualty",
+            "Earthspur Miner",
+            "Entertainer",
+            "Faction Agent",
+            "Far Traveler",
+            "Folk Hero",
+            "Gate Urchin",
+            "Gladiator",
+            "Guild artisan",
+            "Guild Merchant",
+            "Harbofolk",
+            "Haunted One",
+            "Hermit",
+            "Hillsfar Merchant",
+            "Hillsfar smuggler",
+            "Inheritor",
+            "Initiate",
+            "Inquisitor",
+            "Investigator",
+            "Iron Route Bandit",
+            "Knight",
+            "Knight of the Order",
+            "Mercenary Veteran",
+            "Mulmaster Aristocrat",
+            "Noble",
+            "Outlander",
+            "Phlan Insurgent",
+            "Phlan Refugee",
+            "Pirate",
+            "Sage",
+            "Sailor",
+            "Secret Identity",
+            "Shade Fanatic",
+            "Soldier",
+            "Spy",
+            "Stojanow Prisoner",
+            "Ticklebelly Nomad",
+            "Trade Sheriff",
+            "Urban Bounty Hunter",
+            "Urchin",
+            "Uthgart Tribe Member",
+            "Vizier",
+            "Waterhavian Noble"});
+            this.cmbBackground.Location = new System.Drawing.Point(230, 30);
+            this.cmbBackground.Name = "cmbBackground";
+            this.cmbBackground.Size = new System.Drawing.Size(121, 21);
+            this.cmbBackground.TabIndex = 4;
+            this.cmbBackground.Text = "No Custom Suport";
+            this.cmbBackground.SelectedIndexChanged += new System.EventHandler(this.cmbBackground_SelectedIndexChanged);
+            // 
             // panelStats
             // 
             this.panelStats.Controls.Add(this.label10);
@@ -1792,71 +1857,6 @@
             this.SaveLocation.Filter = "txt Text | *.txt";
             this.SaveLocation.Title = "Select where you want to save this sheet";
             // 
-            // cmbBackground
-            // 
-            this.cmbBackground.FormattingEnabled = true;
-            this.cmbBackground.Items.AddRange(new object[] {
-            "Acolyte",
-            "Black Fist Double Agent",
-            "Caravan Specialist",
-            "Charlatan",
-            "City Watch",
-            "Clan Crafter",
-            "Cloistered Scholar",
-            "Cormanthor Refugee",
-            "Courtier",
-            "Criminal",
-            "Dissenter",
-            "Dragon Casualty",
-            "Earthspur Miner",
-            "Entertainer",
-            "Faction Agent",
-            "Far Traveler",
-            "Folk Hero",
-            "Gate Urchin",
-            "Gladiator",
-            "Guild artisan",
-            "Guild Merchant",
-            "Harbofolk",
-            "Haunted One",
-            "Hermit",
-            "Hillsfar Merchant",
-            "Hillsfar smuggler",
-            "Inheritor",
-            "Initiate",
-            "Inquisitor",
-            "Investigator",
-            "Iron Route Bandit",
-            "Knight",
-            "Knight of the Order",
-            "Mercenary Veteran",
-            "Mulmaster Aristocrat",
-            "Noble",
-            "Outlander",
-            "Phlan Insurgent",
-            "Phlan Refugee",
-            "Pirate",
-            "Sage",
-            "Sailor",
-            "Secret Identity",
-            "Shade Fanatic",
-            "Soldier",
-            "Spy",
-            "Stojanow Prisoner",
-            "Ticklebelly Nomad",
-            "Trade Sheriff",
-            "Urban Bounty Hunter",
-            "Urchin",
-            "Uthgart Tribe Member",
-            "Vizier",
-            "Waterhavian Noble"});
-            this.cmbBackground.Location = new System.Drawing.Point(230, 30);
-            this.cmbBackground.Name = "cmbBackground";
-            this.cmbBackground.Size = new System.Drawing.Size(121, 21);
-            this.cmbBackground.TabIndex = 4;
-            this.cmbBackground.Text = "No Custom Suport";
-            this.cmbBackground.SelectedIndexChanged += new System.EventHandler(this.cmbBackground_SelectedIndexChanged);
-            // 
             // MakeSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1881,6 +1881,7 @@
             this.Controls.Add(this.GrpSkills);
             this.Name = "MakeSheet";
             this.Text = "MakeSheet";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.GrpSkills.ResumeLayout(false);
             this.GrpSkills.PerformLayout();
             this.pnlRaceSelect.ResumeLayout(false);

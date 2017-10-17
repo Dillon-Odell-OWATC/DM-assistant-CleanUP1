@@ -22,11 +22,10 @@ namespace DM_Assistant
             MakeSheet frmMake = new MakeSheet();
             frmMake.Show();
         }
-
         private void btnDisplaySheet_Click(object sender, EventArgs e)
         {
-            DisplayandEditSheet frmDisplayEdit = new DisplayandEditSheet();
-            frmDisplayEdit.Show();
+            DisplayandEditSheet DisplayEdit = new DisplayandEditSheet();
+            DisplayEdit.Show();
         }
     }
 }

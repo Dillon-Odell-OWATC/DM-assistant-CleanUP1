@@ -62,6 +62,8 @@
             this.label56 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.pnlBaseinfo = new System.Windows.Forms.Panel();
+            this.lblRace = new System.Windows.Forms.Label();
+            this.lblBackground = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -121,6 +123,8 @@
             this.label46 = new System.Windows.Forms.Label();
             this.chkChangeInitiative = new System.Windows.Forms.CheckBox();
             this.panelSecondaryStats = new System.Windows.Forms.Panel();
+            this.lblPassiveWisdom = new System.Windows.Forms.Label();
+            this.lblPassiveWISLable = new System.Windows.Forms.Label();
             this.lblPersuasion = new System.Windows.Forms.Label();
             this.lblPerformance = new System.Windows.Forms.Label();
             this.chkPersuasion = new System.Windows.Forms.CheckBox();
@@ -179,11 +183,7 @@
             this.chkAthletics = new System.Windows.Forms.CheckBox();
             this.lblMakerLable = new System.Windows.Forms.Label();
             this.txtMaker = new System.Windows.Forms.TextBox();
-            this.lblPassiveWISLable = new System.Windows.Forms.Label();
-            this.lblPassiveWisdom = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.lblBackground = new System.Windows.Forms.Label();
-            this.lblRace = new System.Windows.Forms.Label();
+            this.OpenLocation = new System.Windows.Forms.OpenFileDialog();
             this.pnlClassSelect.SuspendLayout();
             this.panelStats.SuspendLayout();
             this.pnlBaseinfo.SuspendLayout();
@@ -552,6 +552,24 @@
             this.pnlBaseinfo.Name = "pnlBaseinfo";
             this.pnlBaseinfo.Size = new System.Drawing.Size(503, 55);
             this.pnlBaseinfo.TabIndex = 87;
+            // 
+            // lblRace
+            // 
+            this.lblRace.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblRace.Location = new System.Drawing.Point(375, 3);
+            this.lblRace.Name = "lblRace";
+            this.lblRace.Size = new System.Drawing.Size(125, 20);
+            this.lblRace.TabIndex = 96;
+            this.lblRace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBackground
+            // 
+            this.lblBackground.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblBackground.Location = new System.Drawing.Point(232, 29);
+            this.lblBackground.Name = "lblBackground";
+            this.lblBackground.Size = new System.Drawing.Size(121, 21);
+            this.lblBackground.TabIndex = 95;
+            this.lblBackground.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -1152,6 +1170,24 @@
             this.panelSecondaryStats.Size = new System.Drawing.Size(250, 81);
             this.panelSecondaryStats.TabIndex = 90;
             // 
+            // lblPassiveWisdom
+            // 
+            this.lblPassiveWisdom.Location = new System.Drawing.Point(188, 25);
+            this.lblPassiveWisdom.Name = "lblPassiveWisdom";
+            this.lblPassiveWisdom.Size = new System.Drawing.Size(30, 17);
+            this.lblPassiveWisdom.TabIndex = 85;
+            this.lblPassiveWisdom.Text = "+0";
+            this.lblPassiveWisdom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblPassiveWISLable
+            // 
+            this.lblPassiveWISLable.AutoSize = true;
+            this.lblPassiveWISLable.Location = new System.Drawing.Point(164, 8);
+            this.lblPassiveWISLable.Name = "lblPassiveWISLable";
+            this.lblPassiveWISLable.Size = new System.Drawing.Size(85, 13);
+            this.lblPassiveWISLable.TabIndex = 95;
+            this.lblPassiveWISLable.Text = "Passive Wisdom";
+            // 
             // lblPersuasion
             // 
             this.lblPersuasion.Location = new System.Drawing.Point(41, 675);
@@ -1339,6 +1375,7 @@
             this.btnModify.TabIndex = 81;
             this.btnModify.Text = "Modify";
             this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // chkInsight
             // 
@@ -1751,45 +1788,10 @@
             this.txtMaker.Size = new System.Drawing.Size(96, 20);
             this.txtMaker.TabIndex = 80;
             // 
-            // lblPassiveWISLable
+            // OpenLocation
             // 
-            this.lblPassiveWISLable.AutoSize = true;
-            this.lblPassiveWISLable.Location = new System.Drawing.Point(164, 8);
-            this.lblPassiveWISLable.Name = "lblPassiveWISLable";
-            this.lblPassiveWISLable.Size = new System.Drawing.Size(85, 13);
-            this.lblPassiveWISLable.TabIndex = 95;
-            this.lblPassiveWISLable.Text = "Passive Wisdom";
-            // 
-            // lblPassiveWisdom
-            // 
-            this.lblPassiveWisdom.Location = new System.Drawing.Point(188, 25);
-            this.lblPassiveWisdom.Name = "lblPassiveWisdom";
-            this.lblPassiveWisdom.Size = new System.Drawing.Size(30, 17);
-            this.lblPassiveWisdom.TabIndex = 85;
-            this.lblPassiveWisdom.Text = "+0";
-            this.lblPassiveWisdom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "OpenLocation";
-            // 
-            // lblBackground
-            // 
-            this.lblBackground.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblBackground.Location = new System.Drawing.Point(232, 29);
-            this.lblBackground.Name = "lblBackground";
-            this.lblBackground.Size = new System.Drawing.Size(121, 21);
-            this.lblBackground.TabIndex = 95;
-            this.lblBackground.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblRace
-            // 
-            this.lblRace.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblRace.Location = new System.Drawing.Point(375, 3);
-            this.lblRace.Name = "lblRace";
-            this.lblRace.Size = new System.Drawing.Size(125, 20);
-            this.lblRace.TabIndex = 96;
-            this.lblRace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.OpenLocation.FileName = "OpenLocation";
+            this.OpenLocation.Filter = "txt Text | *.txt";
             // 
             // DisplayandEditSheet
             // 
@@ -1994,7 +1996,7 @@
         private System.Windows.Forms.TextBox txtMaker;
         private System.Windows.Forms.Label lblPassiveWisdom;
         private System.Windows.Forms.Label lblPassiveWISLable;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog OpenLocation;
         private System.Windows.Forms.Label lblBackground;
         private System.Windows.Forms.Label lblRace;
     }

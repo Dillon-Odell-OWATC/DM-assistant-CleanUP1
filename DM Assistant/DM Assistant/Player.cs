@@ -9,7 +9,6 @@ namespace DM_Assistant
     class Player:Creature
     {
         private int _ProficancyMod;
-        private int _EXP;
         private string _Class;
         private string _Background;
         private string _Feats;
@@ -39,11 +38,7 @@ namespace DM_Assistant
             get { return _ProficancyMod; }
             set { _ProficancyMod = value; }
         }
-        public int EXP
-        {
-            get { return _EXP; }
-            set { _EXP = value; }
-        }
+        
         public string Class
         {
             get { return _Class; }

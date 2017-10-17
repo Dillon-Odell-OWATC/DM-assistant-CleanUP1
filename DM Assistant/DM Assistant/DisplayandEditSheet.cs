@@ -1073,9 +1073,9 @@ namespace DM_Assistant
                     StreamWriter PlayerSheet = new StreamWriter(SaveLocation.FileName);
                     PlayerSheet.WriteLine(NewPlayer.Name);
                     PlayerSheet.WriteLine(NewPlayer.EXP);
-                    PlayerSheet.WriteLine(NewPlayer.Race);
+                    PlayerSheet.WriteLine(lblRace.Text);
                     PlayerSheet.WriteLine(NewPlayer.Class);
-                    PlayerSheet.WriteLine(NewPlayer.Background);
+                    PlayerSheet.WriteLine(lblBackground.Text);
                     PlayerSheet.WriteLine(NewPlayer.Alignment);
                     PlayerSheet.WriteLine(NewPlayer.STR);
                     PlayerSheet.WriteLine(NewPlayer.DEX);
@@ -1242,6 +1242,11 @@ namespace DM_Assistant
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            SaveFile();
+        }
+
+        private void btnModify_Click(object sender, EventArgs e)
         {
 
         }
