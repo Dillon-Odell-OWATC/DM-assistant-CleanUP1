@@ -28,7 +28,6 @@ namespace DM_Assistant
         private string _Maker;
 
         //No constuctor relying on the Default Values
-
         //Making it so I am able to set the stats for the class
         public int STR
         {

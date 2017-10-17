@@ -35,3 +35,5 @@ K:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM Assistant.csproj.GenerateR
 K:\C#NET\Final\DM Assistant\DM Assistant\bin\Debug\DM Assistant.exe
 K:\C#NET\Final\DM Assistant\DM Assistant\bin\Debug\DM Assistant.pdb
 K:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.DisplayandEditSheet.resources
+D:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.DisplayandEditSheet.resources
+D:\C#NET\Final\DM Assistant\DM Assistant\obj\Debug\DM_Assistant.MakeMonster.resources

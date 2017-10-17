@@ -98,7 +98,6 @@
             this.txtWeapons = new System.Windows.Forms.TextBox();
             this.lblLanguagesLable = new System.Windows.Forms.Label();
             this.txtLanguages = new System.Windows.Forms.TextBox();
-            this.btnReset = new System.Windows.Forms.Button();
             this.btnSetSpells = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.SaveLocation = new System.Windows.Forms.SaveFileDialog();
@@ -212,6 +211,7 @@
             this.btnClose.TabIndex = 82;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pnlClassSelect
             // 
@@ -512,6 +512,7 @@
             this.txtClass.Name = "txtClass";
             this.txtClass.Size = new System.Drawing.Size(100, 20);
             this.txtClass.TabIndex = 3;
+            this.txtClass.TextChanged += new System.EventHandler(this.txtClass_TextChanged);
             // 
             // label56
             // 
@@ -657,6 +658,7 @@
             this.cmbAlignment.Name = "cmbAlignment";
             this.cmbAlignment.Size = new System.Drawing.Size(40, 21);
             this.cmbAlignment.TabIndex = 5;
+            this.cmbAlignment.SelectedIndexChanged += new System.EventHandler(this.cmbAlignment_SelectedIndexChanged);
             // 
             // pnlRaceSelect
             // 
@@ -925,15 +927,6 @@
             this.txtLanguages.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtLanguages.Size = new System.Drawing.Size(180, 60);
             this.txtLanguages.TabIndex = 3;
-            // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(289, 842);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 23);
-            this.btnReset.TabIndex = 83;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
             // 
             // btnSetSpells
             // 
@@ -1215,6 +1208,7 @@
             this.chkPersuasion.TabIndex = 80;
             this.chkPersuasion.Text = "Persuasion";
             this.chkPersuasion.UseVisualStyleBackColor = true;
+            this.chkPersuasion.CheckedChanged += new System.EventHandler(this.chkPersuasion_CheckedChanged);
             // 
             // chkPerformance
             // 
@@ -1225,6 +1219,7 @@
             this.chkPerformance.TabIndex = 84;
             this.chkPerformance.Text = "Performance";
             this.chkPerformance.UseVisualStyleBackColor = true;
+            this.chkPerformance.CheckedChanged += new System.EventHandler(this.chkPerformance_CheckedChanged);
             // 
             // lblIntimidation
             // 
@@ -1253,6 +1248,7 @@
             this.chkIntimidation.TabIndex = 81;
             this.chkIntimidation.Text = "Intimidation";
             this.chkIntimidation.UseVisualStyleBackColor = true;
+            this.chkIntimidation.CheckedChanged += new System.EventHandler(this.chkIntimidation_CheckedChanged);
             // 
             // chkDeception
             // 
@@ -1263,6 +1259,7 @@
             this.chkDeception.TabIndex = 82;
             this.chkDeception.Text = "Deception";
             this.chkDeception.UseVisualStyleBackColor = true;
+            this.chkDeception.CheckedChanged += new System.EventHandler(this.chkDeception_CheckedChanged);
             // 
             // lblCHASavingThrow
             // 
@@ -1282,6 +1279,7 @@
             this.chkCHASavingThrow.TabIndex = 74;
             this.chkCHASavingThrow.Text = "Saving Throw";
             this.chkCHASavingThrow.UseVisualStyleBackColor = true;
+            this.chkCHASavingThrow.CheckedChanged += new System.EventHandler(this.chkCHASavingThrow_CheckedChanged);
             // 
             // lblCHASkillsLable
             // 
@@ -1310,6 +1308,7 @@
             this.chkSurvival.TabIndex = 70;
             this.chkSurvival.Text = "Survival";
             this.chkSurvival.UseVisualStyleBackColor = true;
+            this.chkSurvival.CheckedChanged += new System.EventHandler(this.chkSurvival_CheckedChanged);
             // 
             // lblMedicine
             // 
@@ -1329,6 +1328,7 @@
             this.chkPerception.TabIndex = 70;
             this.chkPerception.Text = "Perception";
             this.chkPerception.UseVisualStyleBackColor = true;
+            this.chkPerception.CheckedChanged += new System.EventHandler(this.chkPerception_CheckedChanged);
             // 
             // chkMedicine
             // 
@@ -1339,6 +1339,7 @@
             this.chkMedicine.TabIndex = 72;
             this.chkMedicine.Text = "Medicine";
             this.chkMedicine.UseVisualStyleBackColor = true;
+            this.chkMedicine.CheckedChanged += new System.EventHandler(this.chkMedicine_CheckedChanged);
             // 
             // lblInsight
             // 
@@ -1386,6 +1387,7 @@
             this.chkInsight.TabIndex = 70;
             this.chkInsight.Text = "Insight";
             this.chkInsight.UseVisualStyleBackColor = true;
+            this.chkInsight.CheckedChanged += new System.EventHandler(this.chkInsight_CheckedChanged);
             // 
             // GrpSkills
             // 
@@ -1459,6 +1461,7 @@
             this.chkAnimalHandling.TabIndex = 70;
             this.chkAnimalHandling.Text = "Animal Handling";
             this.chkAnimalHandling.UseVisualStyleBackColor = true;
+            this.chkAnimalHandling.CheckedChanged += new System.EventHandler(this.chkAnimalHandling_CheckedChanged);
             // 
             // lblWISSkillsLable
             // 
@@ -1487,6 +1490,7 @@
             this.chkWISSavingThrow.TabIndex = 68;
             this.chkWISSavingThrow.Text = "Saving Throw";
             this.chkWISSavingThrow.UseVisualStyleBackColor = true;
+            this.chkWISSavingThrow.CheckedChanged += new System.EventHandler(this.chkWISSavingThrow_CheckedChanged);
             // 
             // lblReligion
             // 
@@ -1506,6 +1510,7 @@
             this.chkReligion.TabIndex = 64;
             this.chkReligion.Text = "Religion";
             this.chkReligion.UseVisualStyleBackColor = true;
+            this.chkReligion.CheckedChanged += new System.EventHandler(this.chkReligion_CheckedChanged);
             // 
             // lblNature
             // 
@@ -1534,6 +1539,7 @@
             this.chkNature.TabIndex = 58;
             this.chkNature.Text = "Nature";
             this.chkNature.UseVisualStyleBackColor = true;
+            this.chkNature.CheckedChanged += new System.EventHandler(this.chkNature_CheckedChanged);
             // 
             // chkInvestigation
             // 
@@ -1544,6 +1550,7 @@
             this.chkInvestigation.TabIndex = 62;
             this.chkInvestigation.Text = "Investigation";
             this.chkInvestigation.UseVisualStyleBackColor = true;
+            this.chkInvestigation.CheckedChanged += new System.EventHandler(this.chkInvestigation_CheckedChanged);
             // 
             // lblHistory
             // 
@@ -1563,6 +1570,7 @@
             this.chkHistory.TabIndex = 60;
             this.chkHistory.Text = "History";
             this.chkHistory.UseVisualStyleBackColor = true;
+            this.chkHistory.CheckedChanged += new System.EventHandler(this.chkHistory_CheckedChanged);
             // 
             // lblArcana
             // 
@@ -1582,6 +1590,7 @@
             this.chkArcana.TabIndex = 58;
             this.chkArcana.Text = "Arcana";
             this.chkArcana.UseVisualStyleBackColor = true;
+            this.chkArcana.CheckedChanged += new System.EventHandler(this.chkArcana_CheckedChanged);
             // 
             // lblINTSavingThrow
             // 
@@ -1601,6 +1610,7 @@
             this.chkINTSavingThrow.TabIndex = 56;
             this.chkINTSavingThrow.Text = "Saving Throw";
             this.chkINTSavingThrow.UseVisualStyleBackColor = true;
+            this.chkINTSavingThrow.CheckedChanged += new System.EventHandler(this.chkINTSavingThrow_CheckedChanged);
             // 
             // lblINTSkillsLable
             // 
@@ -1629,6 +1639,7 @@
             this.chkCONSavingThrow.TabIndex = 54;
             this.chkCONSavingThrow.Text = "Saving Throw";
             this.chkCONSavingThrow.UseVisualStyleBackColor = true;
+            this.chkCONSavingThrow.CheckedChanged += new System.EventHandler(this.chkCONSavingThrow_CheckedChanged);
             // 
             // lblCONSkillsLable
             // 
@@ -1666,6 +1677,7 @@
             this.chkStealth.TabIndex = 50;
             this.chkStealth.Text = "Stealth";
             this.chkStealth.UseVisualStyleBackColor = true;
+            this.chkStealth.CheckedChanged += new System.EventHandler(this.chkStealth_CheckedChanged);
             // 
             // chkSleightOfHand
             // 
@@ -1676,6 +1688,7 @@
             this.chkSleightOfHand.TabIndex = 52;
             this.chkSleightOfHand.Text = "Sleight of Hand";
             this.chkSleightOfHand.UseVisualStyleBackColor = true;
+            this.chkSleightOfHand.CheckedChanged += new System.EventHandler(this.chkSleightOfHand_CheckedChanged);
             // 
             // lblAcrobatics
             // 
@@ -1695,6 +1708,7 @@
             this.chkAcrobatics.TabIndex = 50;
             this.chkAcrobatics.Text = "Acrobatics";
             this.chkAcrobatics.UseVisualStyleBackColor = true;
+            this.chkAcrobatics.CheckedChanged += new System.EventHandler(this.chkAcrobatics_CheckedChanged);
             // 
             // lblDEXSavingThrow
             // 
@@ -1714,6 +1728,7 @@
             this.chkDEXSavingThrow.TabIndex = 48;
             this.chkDEXSavingThrow.Text = "Saving Throw";
             this.chkDEXSavingThrow.UseVisualStyleBackColor = true;
+            this.chkDEXSavingThrow.CheckedChanged += new System.EventHandler(this.chkDEXSavingThrow_CheckedChanged);
             // 
             // lblDEXSkillsLable
             // 
@@ -1751,6 +1766,7 @@
             this.chkSTRSavingThrow.TabIndex = 45;
             this.chkSTRSavingThrow.Text = "Saving Throw";
             this.chkSTRSavingThrow.UseVisualStyleBackColor = true;
+            this.chkSTRSavingThrow.CheckedChanged += new System.EventHandler(this.chkSTRSavingThrow_CheckedChanged);
             // 
             // lblSTRSkillsLable
             // 
@@ -1770,6 +1786,7 @@
             this.chkAthletics.TabIndex = 44;
             this.chkAthletics.Text = "Athletics";
             this.chkAthletics.UseVisualStyleBackColor = true;
+            this.chkAthletics.CheckedChanged += new System.EventHandler(this.chkAthletics_CheckedChanged);
             // 
             // lblMakerLable
             // 
@@ -1806,7 +1823,6 @@
             this.Controls.Add(this.pnlBaseinfo);
             this.Controls.Add(this.pnlRaceSelect);
             this.Controls.Add(this.pnlInventory);
-            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSetSpells);
             this.Controls.Add(this.pnlPersonality);
             this.Controls.Add(this.pnlFeatsTraitsect);
@@ -1911,7 +1927,6 @@
         private System.Windows.Forms.TextBox txtWeapons;
         private System.Windows.Forms.Label lblLanguagesLable;
         private System.Windows.Forms.TextBox txtLanguages;
-        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnSetSpells;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.SaveFileDialog SaveLocation;

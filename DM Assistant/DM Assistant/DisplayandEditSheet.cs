@@ -693,8 +693,54 @@ namespace DM_Assistant
         //Sets the skills after loading
         private void SetSkillschk()
         {
-            chkSTRSavingThrow.Checked = NewPlayer.GetSkillArray(0);
-            chkPersuasion.Checked = NewPlayer.GetSkillArray(23);
+            int SkillNum = 0;
+            chkSTRSavingThrow.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkAthletics.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkDEXSavingThrow.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkAcrobatics.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkSleightOfHand.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkStealth.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkCONSavingThrow.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkINTSavingThrow.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkArcana.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkHistory.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkInvestigation.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkNature.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkReligion.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkWISSavingThrow.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkAnimalHandling.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkInsight.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkMedicine.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkPerception.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkSurvival.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkCHASavingThrow.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkDeception.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkIntimidation.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkPerformance.Checked = NewPlayer.GetSkillArray(SkillNum);
+            SkillNum++;
+            chkPersuasion.Checked = NewPlayer.GetSkillArray(SkillNum);
         }
         //Functions for setting player attributes
         private void SetSTR()
@@ -1034,13 +1080,10 @@ namespace DM_Assistant
         {
             int SkillProficancy = 0;
             SkillProficancy = SetStatMod(Statlvl);
+            NewPlayer.SetSkillsArray(SkillNum, Proficant);
             if (Proficant)
             {
-                NewPlayer.SetSkillsArray(SkillNum, Proficant);
-                if (NewPlayer.GetSkillArray(SkillNum))
-                {
                     SkillProficancy += NewPlayer.ProficancyMod;
-                }
             }
             return SkillProficancy;
         }
@@ -1243,12 +1286,147 @@ namespace DM_Assistant
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            SaveFile();
+            NewPlayer.Name = txtName.Text;
         }
 
         private void btnModify_Click(object sender, EventArgs e)
         {
+            SaveFile();
+        }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void chkSTRSavingThrow_CheckedChanged(object sender, EventArgs e)
+        {
+            STRSkillCheck();
+        }
+
+        private void chkAthletics_CheckedChanged(object sender, EventArgs e)
+        {
+            STRSkillCheck();
+        }
+
+        private void chkDEXSavingThrow_CheckedChanged(object sender, EventArgs e)
+        {
+            DEXSkillCheck();
+        }
+
+        private void chkAcrobatics_CheckedChanged(object sender, EventArgs e)
+        {
+            DEXSkillCheck();
+        }
+
+        private void chkSleightOfHand_CheckedChanged(object sender, EventArgs e)
+        {
+            DEXSkillCheck();
+        }
+
+        private void chkStealth_CheckedChanged(object sender, EventArgs e)
+        {
+            DEXSkillCheck();
+        }
+
+        private void chkCONSavingThrow_CheckedChanged(object sender, EventArgs e)
+        {
+            CONSkillCheck();
+        }
+
+        private void chkINTSavingThrow_CheckedChanged(object sender, EventArgs e)
+        {
+            INTSkillCheck();
+        }
+
+        private void chkArcana_CheckedChanged(object sender, EventArgs e)
+        {
+            INTSkillCheck();
+        }
+
+        private void chkHistory_CheckedChanged(object sender, EventArgs e)
+        {
+            INTSkillCheck();
+        }
+
+        private void chkInvestigation_CheckedChanged(object sender, EventArgs e)
+        {
+            INTSkillCheck();
+        }
+
+        private void chkNature_CheckedChanged(object sender, EventArgs e)
+        {
+            INTSkillCheck();
+        }
+
+        private void chkReligion_CheckedChanged(object sender, EventArgs e)
+        {
+            INTSkillCheck();
+        }
+
+        private void chkWISSavingThrow_CheckedChanged(object sender, EventArgs e)
+        {
+            WISSkillCheck();
+        }
+
+        private void chkAnimalHandling_CheckedChanged(object sender, EventArgs e)
+        {
+            WISSkillCheck();
+        }
+
+        private void chkInsight_CheckedChanged(object sender, EventArgs e)
+        {
+            WISSkillCheck();
+        }
+
+        private void chkMedicine_CheckedChanged(object sender, EventArgs e)
+        {
+            WISSkillCheck();
+        }
+
+        private void chkPerception_CheckedChanged(object sender, EventArgs e)
+        {
+            WISSkillCheck();
+        }
+
+        private void chkSurvival_CheckedChanged(object sender, EventArgs e)
+        {
+            WISSkillCheck();
+        }
+
+        private void chkCHASavingThrow_CheckedChanged(object sender, EventArgs e)
+        {
+            CHASkillCheck();
+        }
+
+        private void chkDeception_CheckedChanged(object sender, EventArgs e)
+        {
+            CHASkillCheck();
+        }
+
+        private void chkIntimidation_CheckedChanged(object sender, EventArgs e)
+        {
+            CHASkillCheck();
+        }
+
+        private void chkPerformance_CheckedChanged(object sender, EventArgs e)
+        {
+            CHASkillCheck();
+        }
+
+        private void chkPersuasion_CheckedChanged(object sender, EventArgs e)
+        {
+            CHASkillCheck();
+        }
+
+        private void txtClass_TextChanged(object sender, EventArgs e)
+        {
+            NewPlayer.Class = txtClass.Text;
+        }
+
+        private void cmbAlignment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            NewPlayer.Alignment = cmbAlignment.Text;
         }
     }
 }

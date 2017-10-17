@@ -72,6 +72,7 @@
             this.btnMakeMonsters.TabIndex = 3;
             this.btnMakeMonsters.Text = "Make\r\nMonsters";
             this.btnMakeMonsters.UseVisualStyleBackColor = true;
+            this.btnMakeMonsters.Click += new System.EventHandler(this.btnMakeMonsters_Click);
             // 
             // btnDisplayMonster
             // 

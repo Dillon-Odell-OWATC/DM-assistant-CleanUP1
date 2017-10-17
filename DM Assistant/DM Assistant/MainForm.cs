@@ -20,12 +20,18 @@ namespace DM_Assistant
         private void btnMakeSheet_Click(object sender, EventArgs e)
         {
             MakeSheet frmMake = new MakeSheet();
-            frmMake.Show();
+            frmMake.ShowDialog();
         }
         private void btnDisplaySheet_Click(object sender, EventArgs e)
         {
             DisplayandEditSheet DisplayEdit = new DisplayandEditSheet();
             DisplayEdit.Show();
+        }
+
+        private void btnMakeMonsters_Click(object sender, EventArgs e)
+        {
+            MakeMonster frmMakeMonster = new MakeMonster();
+            frmMakeMonster.ShowDialog();
         }
     }
 }

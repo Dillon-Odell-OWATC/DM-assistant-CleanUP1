@@ -8,15 +8,16 @@ namespace DM_Assistant
 {
     class Monster : Creature
     {
-        private int _FlyingSpeed;
-        private string _Skills;
-        private string _FeatsAndTraits;
-        private string _Actions;
-        private string _LegendaryActions;
         public Monster()
             :base()
         {
 
         }
+        public int FlyingSpeed { get; set; }
+        public string Skills { get; set; }
+        public string FeatsAndTraits { get; set; }
+        public string Actions { get; set; }
+        public string LegendaryActions { get; set; }
+
     }
 }

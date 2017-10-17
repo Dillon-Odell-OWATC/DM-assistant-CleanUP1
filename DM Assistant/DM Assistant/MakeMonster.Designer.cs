@@ -68,6 +68,7 @@
             this.txtLegendaryActions = new System.Windows.Forms.TextBox();
             this.chkLegandaryActions = new System.Windows.Forms.CheckBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.SaveLocation = new System.Windows.Forms.SaveFileDialog();
             this.panelStats.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -434,6 +435,7 @@
             // 
             // txtLegendaryActions
             // 
+            this.txtLegendaryActions.Enabled = false;
             this.txtLegendaryActions.Location = new System.Drawing.Point(270, 219);
             this.txtLegendaryActions.Multiline = true;
             this.txtLegendaryActions.Name = "txtLegendaryActions";
@@ -450,6 +452,7 @@
             this.chkLegandaryActions.TabIndex = 74;
             this.chkLegandaryActions.Text = "Legandary Actions";
             this.chkLegandaryActions.UseVisualStyleBackColor = true;
+            this.chkLegandaryActions.CheckedChanged += new System.EventHandler(this.chkLegandaryActions_CheckedChanged);
             // 
             // btnSave
             // 
@@ -457,6 +460,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 75;
+            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -531,5 +535,6 @@
         private System.Windows.Forms.CheckBox chkLegandaryActions;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtFlying;
+        private System.Windows.Forms.SaveFileDialog SaveLocation;
     }
 }

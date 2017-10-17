@@ -1025,13 +1025,10 @@ namespace DM_Assistant
         {
             int SkillProficancy = 0;
             SkillProficancy = SetStatMod(Statlvl);
+            NewPlayer.SetSkillsArray(SkillNum, Proficant);
             if (Proficant)
             {
-                NewPlayer.SetSkillsArray(SkillNum, Proficant);
-                if (NewPlayer.GetSkillArray(SkillNum))
-                {
-                    SkillProficancy += NewPlayer.ProficancyMod;
-                }
+                SkillProficancy += NewPlayer.ProficancyMod;
             }
             return SkillProficancy;
         }
@@ -1350,5 +1347,6 @@ namespace DM_Assistant
         {
             CHASkillCheck();
         }
+
     }
 }
