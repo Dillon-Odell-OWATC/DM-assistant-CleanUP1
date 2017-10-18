@@ -35,3 +35,6 @@ C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assis
 C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Properties.Resources.resources
 C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.ViewMonster.resources
 C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM Assistant.csproj.GenerateResource.Cache
+D:\DM Assistant - CS Changes\DM Assistant\DM Assistant\bin\Release\DM Assistant.exe.config
+D:\DM Assistant - CS Changes\DM Assistant\DM Assistant\obj\Release\DM Assistant.exe
+D:\DM Assistant - CS Changes\DM Assistant\DM Assistant\obj\Release\DM Assistant.pdb

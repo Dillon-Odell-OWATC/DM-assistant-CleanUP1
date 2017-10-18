@@ -9,9 +9,8 @@ using System.Text.RegularExpressions;
 
 namespace DM_Assistant
 {
-    class Utilities
+    public static class Utilities
     {
-
         
     }
 }
