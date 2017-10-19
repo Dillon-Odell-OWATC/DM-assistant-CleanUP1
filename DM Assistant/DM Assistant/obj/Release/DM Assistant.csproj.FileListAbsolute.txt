@@ -38,3 +38,31 @@ C:\Users\Dillion.O'dell\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assis
 D:\DM Assistant - CS Changes\DM Assistant\DM Assistant\bin\Release\DM Assistant.exe.config
 D:\DM Assistant - CS Changes\DM Assistant\DM Assistant\obj\Release\DM Assistant.exe
 D:\DM Assistant - CS Changes\DM Assistant\DM Assistant\obj\Release\DM Assistant.pdb
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\bin\Release\DM Assistant.exe.config
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\bin\Release\DM Assistant.exe
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\bin\Release\DM Assistant.pdb
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM Assistant.csprojResolveAssemblyReference.cache
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Forms.DisplayandEditSheet.resources
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Forms.MainForm.resources
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Forms.MakeMonster.resources
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Forms.MakeSheet.resources
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Properties.Resources.resources
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Forms.ViewMonster.resources
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM Assistant.csproj.GenerateResource.Cache
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM Assistant.csproj.CoreCompileInputs.cache
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM Assistant.exe
+C:\Users\SandersC\Source\Repos\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM Assistant.pdb
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\bin\Release\DM Assistant.exe.config
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\bin\Release\DM Assistant.exe
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\bin\Release\DM Assistant.pdb
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM Assistant.csprojResolveAssemblyReference.cache
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Forms.DisplayandEditSheet.resources
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Forms.MainForm.resources
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Forms.MakeMonster.resources
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Forms.MakeSheet.resources
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Properties.Resources.resources
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM_Assistant.Forms.ViewMonster.resources
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM Assistant.csproj.GenerateResource.Cache
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM Assistant.csproj.CoreCompileInputs.cache
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM Assistant.exe
+C:\Users\corey.sanders\Downloads\DM-assistant-CleanUP1\DM Assistant\DM Assistant\obj\Release\DM Assistant.pdb

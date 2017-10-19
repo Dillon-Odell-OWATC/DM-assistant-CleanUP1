@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DM_Assistant.Entities
 {
 
-    abstract class Creature
+    public abstract class Creature
     {
         //No constuctor relying on the Default Values
         //Making it so I am able to set the stats for the class

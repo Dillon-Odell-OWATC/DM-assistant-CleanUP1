@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace DM_Assistant.Entities
 {
-    class Monster : Creature
+    public class Monster : Creature
     {
         #region Constructor
         public Monster()

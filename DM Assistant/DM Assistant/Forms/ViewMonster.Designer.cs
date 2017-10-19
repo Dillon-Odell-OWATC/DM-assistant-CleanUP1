@@ -37,7 +37,9 @@
             this.txtTraits = new System.Windows.Forms.TextBox();
             this.txtSkills = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEXP = new System.Windows.Forms.TextBox();
             this.txtFlying = new System.Windows.Forms.TextBox();
+            this.lblEXP = new System.Windows.Forms.Label();
             this.lblFlying = new System.Windows.Forms.Label();
             this.txtSpeed = new System.Windows.Forms.TextBox();
             this.lblSpeed = new System.Windows.Forms.Label();
@@ -69,8 +71,6 @@
             this.lblCHA = new System.Windows.Forms.Label();
             this.lblNotesLable = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
-            this.txtEXP = new System.Windows.Forms.TextBox();
-            this.lblEXP = new System.Windows.Forms.Label();
             this.btnSaveNotes = new System.Windows.Forms.Button();
             this.btnLoadNotes = new System.Windows.Forms.Button();
             this.OpenLocation = new System.Windows.Forms.OpenFileDialog();
@@ -174,6 +174,14 @@
             this.panel1.Size = new System.Drawing.Size(243, 86);
             this.panel1.TabIndex = 82;
             // 
+            // txtEXP
+            // 
+            this.txtEXP.Location = new System.Drawing.Point(160, 58);
+            this.txtEXP.Name = "txtEXP";
+            this.txtEXP.Size = new System.Drawing.Size(77, 20);
+            this.txtEXP.TabIndex = 88;
+            this.txtEXP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txtFlying
             // 
             this.txtFlying.Location = new System.Drawing.Point(117, 58);
@@ -181,6 +189,16 @@
             this.txtFlying.Size = new System.Drawing.Size(33, 20);
             this.txtFlying.TabIndex = 4;
             this.txtFlying.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblEXP
+            // 
+            this.lblEXP.AutoSize = true;
+            this.lblEXP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.lblEXP.Location = new System.Drawing.Point(183, 42);
+            this.lblEXP.Name = "lblEXP";
+            this.lblEXP.Size = new System.Drawing.Size(28, 13);
+            this.lblEXP.TabIndex = 89;
+            this.lblEXP.Text = "EXP";
             // 
             // lblFlying
             // 
@@ -471,24 +489,6 @@
             this.txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtNotes.Size = new System.Drawing.Size(777, 160);
             this.txtNotes.TabIndex = 86;
-            // 
-            // txtEXP
-            // 
-            this.txtEXP.Location = new System.Drawing.Point(160, 58);
-            this.txtEXP.Name = "txtEXP";
-            this.txtEXP.Size = new System.Drawing.Size(77, 20);
-            this.txtEXP.TabIndex = 88;
-            this.txtEXP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblEXP
-            // 
-            this.lblEXP.AutoSize = true;
-            this.lblEXP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.lblEXP.Location = new System.Drawing.Point(183, 42);
-            this.lblEXP.Name = "lblEXP";
-            this.lblEXP.Size = new System.Drawing.Size(28, 13);
-            this.lblEXP.TabIndex = 89;
-            this.lblEXP.Text = "EXP";
             // 
             // btnSaveNotes
             // 

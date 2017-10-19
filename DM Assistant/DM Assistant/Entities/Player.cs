@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DM_Assistant.Entities
 {
-    class Player:Creature
+    public class Player:Creature
     {
         #region Constructors
         public Player()
@@ -29,14 +29,15 @@ namespace DM_Assistant.Entities
         public string Weapons { get; set; }
         public string Currency { get; set; }
         public string Armor { get; set; }
-        public string Teasures { get; set; }
+        public string Treasures { get; set; }
         public int ProficancyMod { get; set; }
         public string Ammunition { get; set; }
+        public string Other { get; set; }
         // each bool represents a differnt skill
         private bool[] _SkillsAray = new bool[24];
         private bool[] tempSkillArray = new bool[24];
-#endregion
-
+        #endregion
+        #region Class Methods
         //sets the skills array true if they are proficant false if not 
         public void SetSkillsArray(int SkillNumber, bool SkillProficant)
         {
@@ -47,5 +48,7 @@ namespace DM_Assistant.Entities
         {
             return tempSkillArray[SkillNumber];
         }
+        #endregion
+
     }
 }
